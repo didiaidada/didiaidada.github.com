@@ -116,6 +116,8 @@ pre {
   max-width: calc(800px - (30px * 2));
   margin-right: auto;
   margin-left: auto;
+   background: url("../../img/post-bg-cute1.jpg") no-repeat center;
+    background-size: contain;
   padding-right: 30px;
   padding-left: 30px; }
   @media screen and (max-width: 800px) {
