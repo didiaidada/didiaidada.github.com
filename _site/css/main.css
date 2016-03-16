@@ -141,6 +141,15 @@ header .wrapper {
       max-width: calc(800px - (30px));
       padding-right: 15px;
       padding-left: 15px; } }
+  .wrapper > h1 {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    margin: -20px auto 0;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700px;
+    font-size: 88px; }
 
 /**
  * Clearfix
