@@ -11,7 +11,7 @@ permalink: /about/
 **[13121309082@163.com](131213090822@163.com)**  &nbsp;&nbsp;&nbsp;|  **(+86) 131213-090-82**  &nbsp;&nbsp;&nbsp;|**喂，wo是个认真的妹纸啊ヾ(=^▽^=)ノ**
 &nbsp;&nbsp;
 
-> [点击下载肖丹的简历吧]()
+> <a href="/img/肖丹-前端开发工程师.pdf" target="_blank">点击查看肖丹的简历吧</a>
 
 ---
 <br/>
@@ -26,10 +26,7 @@ permalink: /about/
 
 
 感谢自己的坚持<br/>
-商场甩卖 我不去扫货  <br/>
-闺密们都在说『来自星星的你』 我不看韩剧 <br/>
-芒果台『爸爸去哪了』 萌娃来袭  我不看综艺<br/>
-不参加同学聚会不能有暑假不能逛淘宝不能做头发不能什么都不能 <br/>
+不参加同学聚会没有有暑假不能逛淘宝不能做头发 <br/>
 日出日落  日复一日  酷暑冬寒   三百多天的付出 <br/>
 **考上了研究生，来到北京**
 
@@ -55,66 +52,10 @@ node.js迅猛发展 我说服导师要用这个实现毕设课题<br/>
 ---
 ---
 
-### 教育背景 {#profile}
 
-|:-----|:-------|:-------|:------
-|北京邮电大学  &nbsp;  &nbsp; &nbsp; &nbsp;   |网络技术研究院  &nbsp; &nbsp; &nbsp;      | 研究生 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    |  2014.09-2017.04
-|西安电子科技大学   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  |软件学院            |本科      |  2009.08-2013.04
-
-------
-
-### 项目经历 {#skills}
-
-**2015.08-2015.12**  &nbsp;  &nbsp; &nbsp; &nbsp;   **『连豆豆』官网** &nbsp; &nbsp; &nbsp; &nbsp;       **前端开发&页面设计**  
-
-项目介绍：『连豆豆』是一款企业成员之间进行安全沟通的及时通讯应用程序。官网实现的功能：产品的介绍，企业用户注册，产品下载。已经实现[中文版和英文版](http://www.linkdood.com)<br/>
-个人职责：<br/>
-
-- 利用JSP+CSS+JS完成所有页面的实现，设计并实现企业注册模块
-- 利用二维码完成产品的不同类型的手机下载，并保证总是最新版本
-- 采用validate.js+ajax后台查询实现注册信息的验证
-
-**2015.05-2015.07**  &nbsp;  &nbsp; &nbsp; &nbsp;   **『连豆豆』打包升级网站** &nbsp; &nbsp; &nbsp; &nbsp;       **前端开发&页面设计**  
-
-项目介绍：该网站主要是管理『连豆豆』客户端和服务器端的升级打包服务。实现的功能：版本的查看，打包，测试，发布，管理，下载等<br/>
-个人职责：<br/>
-
-- 采用bootstrap+jQuery设计并实现该网站的所有页面；
-- 重新设计并实现网站复杂表格的排列，达到易操作，分类清晰化。
-
-**2014.12-2015.04**  &nbsp;  &nbsp; &nbsp; &nbsp;   **中认特种设备查询网站** &nbsp; &nbsp; &nbsp; &nbsp;       **前端开发&页面设计&美工**  
-
-项目介绍：特种设备从业单位和从业人员信息数据权威发布和查询的政府网站<br/>
-个人职责：<br/>
-
-- 调研相关政府职能网站设计，利用PhotoShop实现网站设计并完成各个页面切图；
-- 利用HTML+CSS+JS完成所有页面的实现。
-- 使用CSS hack技术兼容IE7浏览器和其他主流浏览器。
-
----
-
-### 专业技能 {#skills}
-
-
-熟练运用Jsp，HTML，CSS，JavaScript开发语言，具备Node.js开发经验<br/>
-能够运用git，svn等开发工具，了解gulp，Sass，less，Stylus<br/>
-熟知软件开发常用的设计模式，了解常用的数据结构，算法和网络底层协议<br/>
-掌握常用浏览器兼容性问题解决方法<br/>
-
----
-
-### 荣誉证书 {#skills}
-
-本科连续四年获得国家三等奖学金，院二等奖学金，英语六级<br/>
-研究生获得国家二等等学业奖学金<br/>
-研究生获得院优秀班干部<br/>
-
--------
-------
 
 ### 我的 {#footer}
 
-Github: [https://github.com/didiaidada](https://github.com/didiaidada)  
-StackOverflow: [http://stackoverflow.com/users/id/username](http://stackoverflow.com/users/id/username)
-
+Github: [https://github.com/didiaidada](https://github.com/didiaidada)
+CSDN:[http://blog.csdn.net/didiaidada](http://blog.csdn.net/didiaidada)
 ------
