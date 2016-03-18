@@ -21,3 +21,84 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+# Site settings
+description: ddbullfrog's CV
+favicon: /assets/img/dan.jpg
+
+
+# Build settings
+markdown: kramdown
+
+exclude: [vendor]
+
+# Author settings
+author:
+  name: 肖丹
+  title: 前端开发工程师
+  address: 求前端相关实习
+  email: 13121309082@163.com
+  link: http://didiaidada.win
+  weibo: http://weibo.com/u/1784202812
+  github: didiaidada
+  csdn: didiaidada
+  gavatar: /didiaidada.github.com/assets/img/dan.jpg
+  stackoverflow:
+#  stackoverflow: 4582127
+  workHistory:
+    - work1:
+      company1: 北京北信源软件股份有限公司
+      location: 北京海淀区中关村南大街34号中关村科技发展大厦C座16层
+      title: 前端开发&页面设计
+      started: 2015
+      duration: (2015.05 - 至今)
+      description1: 完成『连豆豆』官网，以及后台打包升级网站；『金甲防线』PC端用户评论子模块；公安信息网用户注册子模块。
+    - work2:
+      company: 国家灾备实验室
+      location: 北京邮电大学新科研楼12楼
+      title: 学习&前端开发&页面设计&美工
+      started: 2014
+      duration: (2014.12 - 2015.03)
+      description2: 学习专业知识之余，完成中认特种设备查询网站，是特种设备从业单位和从业人员信息数据权威发布和查询的政府网站。
+  educationHistory:
+    - education1:
+      organization: 北京邮电大学
+      location: Shenyang, China
+      degree: 研究生
+      major: 网络技术研究院
+      started: 2005
+      duration: 2014.09-2017.04
+      description: 学习计算机相关知识的同时对前端开发产生了浓厚的兴趣，已经完成了很多项目的前端部分。毕设也是打算利用node.js实现后台。成绩全年级前10%。
+    - education2:
+      organization: 西安电子科技大学
+      degree: 本科
+      major: 软件学院
+      started: 2009
+      duration: 2009.08-2013.06
+      description: 认真学习本专业课程，同时担任过团支书，积极参加学校和学院组织的文体活动。班长连续四年获得国家三等奖学金，一次企业助学金，成绩全年级前30%。
+  languages:
+    - language1:
+      name: Chinese
+      proficiency: Native
+    - language2:
+      name: English
+      proficiency: Professional
+    - language3:
+      name: Japanese
+      proficiency: Limit
+  programmingSkills:
+    - skill1:
+      name: HTML
+      percentage: 100%
+    - skill2:
+      name: Bootstrap
+      percentage: 90%
+    - skill3:
+      name: JavaScript
+      percentage: 70%
+    - skill4:
+      name: AngularJS
+      percentage: 70%
+    - skill5:
+      name: Java/Java EE
+      percentage: 90%
+

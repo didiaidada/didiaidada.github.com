@@ -8,10 +8,10 @@ permalink: /about/
 
 **前端工程师** &nbsp;&nbsp; &nbsp;|**求实习求内推**
 
-**[13121309082@163.com](131213090822@163.com)**  &nbsp;&nbsp;&nbsp;|  **(+86) 131213-090-82**  &nbsp;&nbsp;&nbsp;|**喂，wo是个认真的妹纸啊ヾ(=^▽^=)ノ**
+**<a href="mailto:">13121309082@163.com</a>**  &nbsp;&nbsp;&nbsp;|  **(+86) 131213-090-82**  &nbsp;&nbsp;&nbsp;|**喂，wo是个认真的妹纸啊ヾ(=^▽^=)ノ**
 &nbsp;&nbsp;
 
-> <a href="/img/肖丹-前端开发工程师.pdf" target="_blank">点击查看肖丹的简历吧</a>
+> <a href="../index1.html" target="_blank">点击查看肖丹的简历吧</a>
 
 ---
 <br/>
