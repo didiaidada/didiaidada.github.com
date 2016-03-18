@@ -35,7 +35,7 @@ exclude: [vendor]
 author:
   name: 肖丹
   title: 前端开发工程师
-  address: 求前端相关实习
+  address: 北京邮电大学西土城路10号
   email: 13121309082@163.com
   link: http://didiaidada.win
   weibo: http://weibo.com/u/1784202812
@@ -81,24 +81,27 @@ author:
       proficiency: Native
     - language2:
       name: English
-      proficiency: Professional
+      proficiency: CET-6
     - language3:
       name: Japanese
       proficiency: Limit
   programmingSkills:
     - skill1:
       name: HTML
-      percentage: 100%
-    - skill2:
-      name: Bootstrap
       percentage: 90%
+    - skill2:
+      name: CSS
+      percentage: 85%
     - skill3:
       name: JavaScript
-      percentage: 70%
+      percentage: 80%
     - skill4:
-      name: AngularJS
+      name: Bootstrap
       percentage: 70%
     - skill5:
-      name: Java/Java EE
-      percentage: 90%
+      name: Node.js
+      percentage: 60%
+    - skill5:
+      name: JSP
+      percentage: 80%
 
