@@ -11,7 +11,7 @@ permalink: /about/
 **<a href="mailto:13121309082@163.com">13121309082@163.com</a>**  &nbsp;&nbsp;&nbsp;|  **(+86) 131213-090-82**  &nbsp;&nbsp;&nbsp;|**喂，wo是个认真的妹纸啊ヾ(=^▽^=)ノ**
 &nbsp;&nbsp;
 
-> <a href="../index1.html" target="_blank">点击查看肖丹的简历吧</a>
+> <a href="../resume.html" target="_blank">点击查看肖丹的简历吧</a>
 
 ---
 <br/>
