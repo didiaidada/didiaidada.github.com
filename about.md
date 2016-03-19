@@ -47,15 +47,3 @@ node.js迅猛发展 我说服导师要用这个实现毕设课题<br/>
 世界太浮华 发展太迅速<br/>
 我喜欢朋友看到我写出页面时的笑容<br/>
 我享受着**写代码时自己的专注**<br/>
-
-
----
----
-
-
-
-### 我的 {#footer}
-
-Github: [https://github.com/didiaidada](https://github.com/didiaidada)
-CSDN:[http://blog.csdn.net/didiaidada](http://blog.csdn.net/didiaidada)
-------

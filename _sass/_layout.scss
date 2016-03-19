@@ -16,6 +16,7 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+  margin-left: 20%;
 
     &,
     &:visited {
@@ -26,7 +27,7 @@
 .site-nav {
     float: right;
     line-height: 56px;
-
+  margin-right: 20%;
     .menu-icon {
         display: none;
     }

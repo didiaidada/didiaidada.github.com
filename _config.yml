@@ -8,10 +8,7 @@
 # Site settings
 title: DanX
 email: 13121309082@163.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: 愿这个小小的博客，给我一片静土。
 baseurl: ""
 header-img: img/post-bg-newBlog.jpg # the subpath of your site, e.g. /blog
 
@@ -22,7 +19,7 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 # Site settings
-description: ddbullfrog's CV
+description: 愿这个小小的博客，给我一片静土。
 favicon: /assets/img/dan.jpg
 
 
@@ -35,7 +32,7 @@ exclude: [vendor]
 author:
   name: 肖丹
   title: 前端开发工程师
-  address: 北京邮电大学西土城路10号
+  address: 求实习求内推
   email: 13121309082@163.com
   link: http://didiaidada.win
   weibo: http://weibo.com/u/1784202812

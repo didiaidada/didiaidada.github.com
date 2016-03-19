@@ -1,23 +1,28 @@
-<header class="site-header">
-  <div class="background" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}') ;">
-  </div>
-  <div class="wrapper" >
-
-  <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-
+<header class="intro-header site-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}') ;">
+  <div class="container">
+    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
     <nav class="site-nav">
       <a href="#" class="menu-icon">
       </a>
 
       <div class="trigger">
         {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
+        {% if my_page.title %}
+        <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+        {% endif %}
         {% endfor %}
       </div>
     </nav>
-  <h1>Escape</h1>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+        <div class="site-heading">
+          <h1>Dan escape</h1>
+          <span class="subheading">总是走在漫长的路上</span>
+        </div>
+      </div>
+    </div>
+
   </div>
+
 
 </header>
