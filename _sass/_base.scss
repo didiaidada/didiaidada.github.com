@@ -17,6 +17,7 @@ body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
     background-color: $background-color;
+    background-image: url(../assets/img/bg.jpg);
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -160,6 +161,8 @@ header .wrapper{
 .wrapper {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+   background-color: #f0f0f0;
+   background-color: rgba(255, 255, 255, 0.4);
     margin-right: auto;
     margin-left: auto;
     padding-right: $spacing-unit;
@@ -197,7 +200,7 @@ header .wrapper{
 }
 @media only screen and (min-width: 768px) {
   .intro-header {
-    margin-bottom: 20px;
+   // margin-bottom: 20px;
     /* response on desktop */
   }
 }

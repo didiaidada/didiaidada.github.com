@@ -8,7 +8,7 @@ permalink: /about/
 
 **前端工程师** &nbsp;&nbsp; &nbsp;|**求实习求内推**
 
-**<a href="mailto:">13121309082@163.com</a>**  &nbsp;&nbsp;&nbsp;|  **(+86) 131213-090-82**  &nbsp;&nbsp;&nbsp;|**喂，wo是个认真的妹纸啊ヾ(=^▽^=)ノ**
+**<a href="mailto:13121309082@163.com">13121309082@163.com</a>**  &nbsp;&nbsp;&nbsp;|  **(+86) 131213-090-82**  &nbsp;&nbsp;&nbsp;|**喂，wo是个认真的妹纸啊ヾ(=^▽^=)ノ**
 &nbsp;&nbsp;
 
 > <a href="../index1.html" target="_blank">点击查看肖丹的简历吧</a>

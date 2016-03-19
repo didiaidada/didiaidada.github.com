@@ -428,14 +428,14 @@ hr {
     padding: 30px 0;
 
 }
-.site-footer .wrapper{
+.site-footer .wrapper1{
     max-width: calc(800px - (30px * 2));
     margin-right: auto;
     margin-left: auto;
     padding-right: 30px;
     padding-left: 30px;
 }
-.site-footer .wrapper .footer-col-wrapper{
+.site-footer .wrapper1 .footer-col-wrapper{
     font-size: 15px;
     color: #828282;
     margin-left: -15px;
