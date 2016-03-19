@@ -260,8 +260,12 @@ header .wrapper {
 
 .site-nav {
   float: right;
+  font-weight: 300;
+  font-size: 25px;
   line-height: 56px;
   margin-right: 20%; }
+  .site-nav, .site-nav:hover, .site-nav:visited {
+    color: #FFFFFF; }
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
@@ -274,8 +278,9 @@ header .wrapper {
       position: absolute;
       top: 9px;
       right: 15px;
-      background-color: #fdfdfd;
-      border: 1px solid #e8e8e8;
+      /*background-color: $background-color;
+      border: 1px solid $grey-color-light;*/
+      color: #ffffff;
       border-radius: 5px;
       text-align: right; }
       .site-nav .menu-icon {
@@ -296,7 +301,8 @@ header .wrapper {
         display: none; }
       .site-nav:hover .trigger {
         display: block;
-        padding-bottom: 5px; }
+        padding-bottom: 5px;
+        background-color: darkgoldenrod; }
       .site-nav .page-link {
         display: block;
         padding: 5px 10px;
