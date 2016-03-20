@@ -8,7 +8,7 @@
 # Site settings
 title: DanX
 email: 13121309082@163.com
-description: 愿这个小小的博客，给我一片静土。
+description:
 baseurl: ""
 next: About
 header-img: img/post-bg-newBlog.jpg # the subpath of your site, e.g. /blog
@@ -24,7 +24,7 @@ paginate_path: "page:num"
 # Build settings
 markdown: kramdown
 # Site settings
-description: 愿这个小小的博客，给我一片静土。
+description:
 favicon: /assets/img/dan.jpg
 
 
