@@ -12,10 +12,14 @@ description: 愿这个小小的博客，给我一片静土。
 baseurl: ""
 next: About
 header-img: img/post-bg-newBlog.jpg # the subpath of your site, e.g. /blog
-
 url: "http://didiaidada.win" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
+
+#Site paginate
+gems: [jekyll-paginate]
+paginate: 10
+paginate_path: "page:num"
 
 # Build settings
 markdown: kramdown
@@ -30,7 +34,7 @@ markdown: kramdown
 exclude: [vendor]
 
 # Author settings
-author: danX
+author:
   name: 肖丹
   title: 前端开发工程师
   address: 求实习求内推

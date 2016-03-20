@@ -171,7 +171,6 @@
 }
 
 
-
 /**
  * Page content
  */
@@ -180,7 +179,11 @@
 }
 
 .page-heading {
-    font-size: 20px;
+  margin-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 8px;
+    font-size: 24px;
+  border-bottom: 1px solid $border-bottom-color;
 }
 
 .post-list {
@@ -188,7 +191,7 @@
     list-style: none;
 
     > li {
-        margin-bottom: $spacing-unit;
+      border-bottom: 1px solid $border-bottom-color;
     }
 }
 
@@ -199,17 +202,33 @@
 
 .post-link {
     display: block;
-    font-size: 24px;
+  h2{
+    font-size: 22px;
+    padding-top:8px;
+  }
+  &:hover{
+    text-decoration: none;
+    background-color: rgba(0, 0, 6, 0.05);
+  }
+
 }
 
-
+/*
+*page divide
+*/
+.paginator{
+  padding-bottom: 12px;
+  padding-top: 12px;
+ text-align: center;
+}
 
 /**
  * Posts
  */
 .post-header {
     margin-bottom: $spacing-unit;
-
+    padding-top:20px;
+    border-bottom: 1px solid $border-bottom-color;
 }
 
 .post-title {

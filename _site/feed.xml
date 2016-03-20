@@ -5,25 +5,135 @@
     <description>愿这个小小的博客，给我一片静土。</description>
     <link>http://didiaidada.win/</link>
     <atom:link href="http://didiaidada.win/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 19 Mar 2016 15:30:58 +0800</pubDate>
-    <lastBuildDate>Sat, 19 Mar 2016 15:30:58 +0800</lastBuildDate>
+    <pubDate>Sun, 20 Mar 2016 22:19:31 +0800</pubDate>
+    <lastBuildDate>Sun, 20 Mar 2016 22:19:31 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
-        <title>my new blog</title>
-        <description>&lt;p&gt;终于把我的博客从CSDN上迁出来了，目前是利用Jekyll在github pages上部署。
-感触有两点：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;利用Bash在Mac上安装Jekyll若遇到问题，要先更新Xcode&lt;/li&gt;
-  &lt;li&gt;目前用的博客模板是默认的，接下来会做更改。&lt;/li&gt;
-&lt;/ul&gt;
-
+        <title>Test10</title>
+        <description>
 </description>
-        <pubDate>Sun, 13 Mar 2016 17:02:42 +0800</pubDate>
-        <link>http://didiaidada.win/2016/03/13/2016-03-13-new.html</link>
-        <guid isPermaLink="true">http://didiaidada.win/2016/03/13/2016-03-13-new.html</guid>
+        <pubDate>Sun, 20 Mar 2016 21:40:12 +0800</pubDate>
+        <link>http://didiaidada.win/2016/03/20/test10.html</link>
+        <guid isPermaLink="true">http://didiaidada.win/2016/03/20/test10.html</guid>
         
+        
+      </item>
+    
+      <item>
+        <title>Test9</title>
+        <description>
+</description>
+        <pubDate>Sun, 20 Mar 2016 21:40:01 +0800</pubDate>
+        <link>http://didiaidada.win/2016/03/20/test9.html</link>
+        <guid isPermaLink="true">http://didiaidada.win/2016/03/20/test9.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Test8</title>
+        <description>
+</description>
+        <pubDate>Sun, 20 Mar 2016 21:39:53 +0800</pubDate>
+        <link>http://didiaidada.win/2016/03/20/test8.html</link>
+        <guid isPermaLink="true">http://didiaidada.win/2016/03/20/test8.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Test7</title>
+        <description>
+</description>
+        <pubDate>Sun, 20 Mar 2016 21:39:39 +0800</pubDate>
+        <link>http://didiaidada.win/2016/03/20/test7.html</link>
+        <guid isPermaLink="true">http://didiaidada.win/2016/03/20/test7.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Test6</title>
+        <description>
+</description>
+        <pubDate>Sun, 20 Mar 2016 21:39:30 +0800</pubDate>
+        <link>http://didiaidada.win/2016/03/20/test6.html</link>
+        <guid isPermaLink="true">http://didiaidada.win/2016/03/20/test6.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>test</title>
+        <description>
+</description>
+        <pubDate>Sun, 20 Mar 2016 21:38:26 +0800</pubDate>
+        <link>http://didiaidada.win/test/2016/03/20/test5.html</link>
+        <guid isPermaLink="true">http://didiaidada.win/test/2016/03/20/test5.html</guid>
+        
+        <category>test</category>
+        
+        
+        <category>test</category>
+        
+      </item>
+    
+      <item>
+        <title>test4</title>
+        <description>
+</description>
+        <pubDate>Sun, 20 Mar 2016 21:38:15 +0800</pubDate>
+        <link>http://didiaidada.win/test/2016/03/20/test4.html</link>
+        <guid isPermaLink="true">http://didiaidada.win/test/2016/03/20/test4.html</guid>
+        
+        
+        <category>test</category>
+        
+      </item>
+    
+      <item>
+        <title>test3</title>
+        <description>
+</description>
+        <pubDate>Sun, 20 Mar 2016 21:37:41 +0800</pubDate>
+        <link>http://didiaidada.win/test3/2016/03/20/test3.html</link>
+        <guid isPermaLink="true">http://didiaidada.win/test3/2016/03/20/test3.html</guid>
+        
+        <category>test3</category>
+        
+        
+        <category>test3</category>
+        
+      </item>
+    
+      <item>
+        <title>test2</title>
+        <description>
+</description>
+        <pubDate>Sun, 20 Mar 2016 21:37:27 +0800</pubDate>
+        <link>http://didiaidada.win/test2/2016/03/20/test2.html</link>
+        <guid isPermaLink="true">http://didiaidada.win/test2/2016/03/20/test2.html</guid>
+        
+        <category>test2</category>
+        
+        
+        <category>test2</category>
+        
+      </item>
+    
+      <item>
+        <title>test1</title>
+        <description>
+</description>
+        <pubDate>Sun, 20 Mar 2016 21:36:59 +0800</pubDate>
+        <link>http://didiaidada.win/test1/2016/03/20/test1.html</link>
+        <guid isPermaLink="true">http://didiaidada.win/test1/2016/03/20/test1.html</guid>
+        
+        <category>test1</category>
+        
+        
+        <category>test1</category>
         
       </item>
     

@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 .highlight {
-  margin-bottom: 15px; }
+  margin-bottom: 0px; }
 
 /**
  * Images
@@ -369,27 +369,46 @@ header .wrapper {
   padding: 30px 0; }
 
 .page-heading {
-  font-size: 20px; }
+  margin-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 8px;
+  font-size: 24px;
+  border-bottom: 1px solid #d1d1d1; }
 
 .post-list {
   margin-left: 0;
   list-style: none; }
   .post-list > li {
-    margin-bottom: 30px; }
+    border-bottom: 1px solid #d1d1d1; }
 
 .post-meta {
   font-size: 14px;
   color: #828282; }
 
 .post-link {
-  display: block;
-  font-size: 24px; }
+  display: block; }
+  .post-link h2 {
+    font-size: 22px;
+    padding-top: 8px; }
+  .post-link:hover {
+    text-decoration: none;
+    background-color: rgba(0, 0, 6, 0.05); }
+
+/*
+*page divide
+*/
+.paginator {
+  padding-bottom: 12px;
+  padding-top: 12px;
+  text-align: center; }
 
 /**
  * Posts
  */
 .post-header {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  padding-top: 20px;
+  border-bottom: 1px solid #d1d1d1; }
 
 .post-title {
   font-size: 42px;
