@@ -12,7 +12,7 @@ description:
 baseurl: ""
 next: About
 header-img: img/post-bg-newBlog.jpg # the subpath of your site, e.g. /blog
-url: "http://didiaidada.win" # the base hostname & protocol for your site
+url: "http://didiaidada.win/" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 

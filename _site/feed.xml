@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DanX</title>
-    <description>愿这个小小的博客，给我一片静土。</description>
-    <link>http://didiaidada.win/</link>
-    <atom:link href="http://didiaidada.win/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 20 Mar 2016 22:19:31 +0800</pubDate>
-    <lastBuildDate>Sun, 20 Mar 2016 22:19:31 +0800</lastBuildDate>
+    <description></description>
+    <link>http://didiaidada.win//</link>
+    <atom:link href="http://didiaidada.win//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 20 Mar 2016 22:43:18 +0800</pubDate>
+    <lastBuildDate>Sun, 20 Mar 2016 22:43:18 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -14,8 +14,8 @@
         <description>
 </description>
         <pubDate>Sun, 20 Mar 2016 21:40:12 +0800</pubDate>
-        <link>http://didiaidada.win/2016/03/20/test10.html</link>
-        <guid isPermaLink="true">http://didiaidada.win/2016/03/20/test10.html</guid>
+        <link>http://didiaidada.win//2016/03/20/test10.html</link>
+        <guid isPermaLink="true">http://didiaidada.win//2016/03/20/test10.html</guid>
         
         
       </item>
@@ -25,8 +25,8 @@
         <description>
 </description>
         <pubDate>Sun, 20 Mar 2016 21:40:01 +0800</pubDate>
-        <link>http://didiaidada.win/2016/03/20/test9.html</link>
-        <guid isPermaLink="true">http://didiaidada.win/2016/03/20/test9.html</guid>
+        <link>http://didiaidada.win//2016/03/20/test9.html</link>
+        <guid isPermaLink="true">http://didiaidada.win//2016/03/20/test9.html</guid>
         
         
       </item>
@@ -36,8 +36,8 @@
         <description>
 </description>
         <pubDate>Sun, 20 Mar 2016 21:39:53 +0800</pubDate>
-        <link>http://didiaidada.win/2016/03/20/test8.html</link>
-        <guid isPermaLink="true">http://didiaidada.win/2016/03/20/test8.html</guid>
+        <link>http://didiaidada.win//2016/03/20/test8.html</link>
+        <guid isPermaLink="true">http://didiaidada.win//2016/03/20/test8.html</guid>
         
         
       </item>
@@ -47,8 +47,8 @@
         <description>
 </description>
         <pubDate>Sun, 20 Mar 2016 21:39:39 +0800</pubDate>
-        <link>http://didiaidada.win/2016/03/20/test7.html</link>
-        <guid isPermaLink="true">http://didiaidada.win/2016/03/20/test7.html</guid>
+        <link>http://didiaidada.win//2016/03/20/test7.html</link>
+        <guid isPermaLink="true">http://didiaidada.win//2016/03/20/test7.html</guid>
         
         
       </item>
@@ -58,8 +58,8 @@
         <description>
 </description>
         <pubDate>Sun, 20 Mar 2016 21:39:30 +0800</pubDate>
-        <link>http://didiaidada.win/2016/03/20/test6.html</link>
-        <guid isPermaLink="true">http://didiaidada.win/2016/03/20/test6.html</guid>
+        <link>http://didiaidada.win//2016/03/20/test6.html</link>
+        <guid isPermaLink="true">http://didiaidada.win//2016/03/20/test6.html</guid>
         
         
       </item>
@@ -69,8 +69,8 @@
         <description>
 </description>
         <pubDate>Sun, 20 Mar 2016 21:38:26 +0800</pubDate>
-        <link>http://didiaidada.win/test/2016/03/20/test5.html</link>
-        <guid isPermaLink="true">http://didiaidada.win/test/2016/03/20/test5.html</guid>
+        <link>http://didiaidada.win//test/2016/03/20/test5.html</link>
+        <guid isPermaLink="true">http://didiaidada.win//test/2016/03/20/test5.html</guid>
         
         <category>test</category>
         
@@ -84,8 +84,8 @@
         <description>
 </description>
         <pubDate>Sun, 20 Mar 2016 21:38:15 +0800</pubDate>
-        <link>http://didiaidada.win/test/2016/03/20/test4.html</link>
-        <guid isPermaLink="true">http://didiaidada.win/test/2016/03/20/test4.html</guid>
+        <link>http://didiaidada.win//test/2016/03/20/test4.html</link>
+        <guid isPermaLink="true">http://didiaidada.win//test/2016/03/20/test4.html</guid>
         
         
         <category>test</category>
@@ -97,8 +97,8 @@
         <description>
 </description>
         <pubDate>Sun, 20 Mar 2016 21:37:41 +0800</pubDate>
-        <link>http://didiaidada.win/test3/2016/03/20/test3.html</link>
-        <guid isPermaLink="true">http://didiaidada.win/test3/2016/03/20/test3.html</guid>
+        <link>http://didiaidada.win//test3/2016/03/20/test3.html</link>
+        <guid isPermaLink="true">http://didiaidada.win//test3/2016/03/20/test3.html</guid>
         
         <category>test3</category>
         
@@ -112,8 +112,8 @@
         <description>
 </description>
         <pubDate>Sun, 20 Mar 2016 21:37:27 +0800</pubDate>
-        <link>http://didiaidada.win/test2/2016/03/20/test2.html</link>
-        <guid isPermaLink="true">http://didiaidada.win/test2/2016/03/20/test2.html</guid>
+        <link>http://didiaidada.win//test2/2016/03/20/test2.html</link>
+        <guid isPermaLink="true">http://didiaidada.win//test2/2016/03/20/test2.html</guid>
         
         <category>test2</category>
         
@@ -127,8 +127,8 @@
         <description>
 </description>
         <pubDate>Sun, 20 Mar 2016 21:36:59 +0800</pubDate>
-        <link>http://didiaidada.win/test1/2016/03/20/test1.html</link>
-        <guid isPermaLink="true">http://didiaidada.win/test1/2016/03/20/test1.html</guid>
+        <link>http://didiaidada.win//test1/2016/03/20/test1.html</link>
+        <guid isPermaLink="true">http://didiaidada.win//test1/2016/03/20/test1.html</guid>
         
         <category>test1</category>
         
