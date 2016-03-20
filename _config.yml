@@ -30,7 +30,7 @@ markdown: kramdown
 exclude: [vendor]
 
 # Author settings
-author:
+author: danX
   name: 肖丹
   title: 前端开发工程师
   address: 求实习求内推
