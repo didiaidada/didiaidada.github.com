@@ -36,8 +36,8 @@ permalink: /about/
 我开始认真写代码<br/>
 HTML CSS JavaScript<br/>
 W3school  『DOM编程艺术』 『JavaScript高级程序设计』...<br/>
-同学都说老师太坑 给的钱太少 教我如何推掉实验室项目<br/>
-那时我真的感受不到他们说的 只想多写几行代码<br/>
+同学都说老师太坑 给的钱太少 <br/>
+我只想多写几行代码<br/>
 一边写 一边学<br/>
 重新捡起自己的数据结构 各种算法我不讨厌<br/>
 『单页Web应用 从前端到后端』『高性能JavaScript』 我惊叹作者的能力<br/>
