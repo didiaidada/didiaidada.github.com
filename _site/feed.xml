@@ -5,8 +5,8 @@
     <description></description>
     <link>http://didiaidada.win//</link>
     <atom:link href="http://didiaidada.win//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Mar 2016 12:49:53 +0800</pubDate>
-    <lastBuildDate>Mon, 21 Mar 2016 12:49:53 +0800</lastBuildDate>
+    <pubDate>Mon, 21 Mar 2016 15:18:00 +0800</pubDate>
+    <lastBuildDate>Mon, 21 Mar 2016 15:18:00 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -21,23 +21,59 @@
 
 &lt;p&gt; 
 1. 创建型设计模式：专注于处理对象的创建机制，以适合给定情况的方式创建对象。主要包括工厂模式，单例模式，构造器模式。
- 
-```
-//工厂模式
+ &lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//工厂模式
 function createObject(name, age, profession){
     var obj = new Object();
     obj.name = name;
     obj.age = age;
     obj.profession = profession;
     obj.move = function(){
-        return this.name + ‘ at ‘ + this.age + ‘ engaged in ‘ + this.profession;
+        return this.name + &#39; at &#39; + this.age + &#39; engaged in &#39; + this.profession;
     };
     return obj;
-}&lt;/p&gt;
+}
 
-&lt;p&gt;```
- 
-  工厂模式用于解决实例化对象大量重复的问题，&lt;/p&gt;
+
+//构造器模式
+function Car(model,year,miles){//构造函数模式
+        this.model = model;
+        this.year = year;
+        this.miles = miles;
+        this.run = function () {
+            return this.model + &quot; has done &quot; + this.miles + &quot;miles&quot;;
+        }
+    }
+ 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;
+ 工厂模式用于解决实例化对象大量重复的问题，好处是：可以消除对象之间的耦合，防止代码重复。但是无法识别对象的具体类型。
+ 构造函数模式解决了重复实例化的问题，又解决了对象识别问题。
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//单例模式
+var single = ( function(){
+    var unique;
+    function getInstance(){
+        if( unique === undefined ){
+           unique = new Construct(); 
+        }
+        reutrn unique;
+    }
+    function Construct(){
+    //生成单例构造函数模式
+    }
+    return {
+        getInstance : getInstance
+    }
+})();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+单例模式限制了类的实例化次数只能是一次，在JS中用于划分命名空间。&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
