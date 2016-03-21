@@ -5,9 +5,57 @@
     <description></description>
     <link>http://didiaidada.win//</link>
     <atom:link href="http://didiaidada.win//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 20 Mar 2016 22:43:18 +0800</pubDate>
-    <lastBuildDate>Sun, 20 Mar 2016 22:43:18 +0800</lastBuildDate>
+    <pubDate>Mon, 21 Mar 2016 12:49:53 +0800</pubDate>
+    <lastBuildDate>Mon, 21 Mar 2016 12:49:53 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>JavaScript设计模式</title>
+        <description>&lt;h2 id=&quot;javascript&quot;&gt;JavaScript设计模式简单解释&lt;/h2&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;JS设计模式按照功能可以分为三类：&lt;strong&gt;创建型设计模式&lt;/strong&gt;；&lt;strong&gt;构造型设计模式&lt;/strong&gt;；&lt;strong&gt;行为设计模式&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt; 
+1. 创建型设计模式：专注于处理对象的创建机制，以适合给定情况的方式创建对象。主要包括工厂模式，单例模式，构造器模式。
+ 
+```
+//工厂模式
+function createObject(name, age, profession){
+    var obj = new Object();
+    obj.name = name;
+    obj.age = age;
+    obj.profession = profession;
+    obj.move = function(){
+        return this.name + ‘ at ‘ + this.age + ‘ engaged in ‘ + this.profession;
+    };
+    return obj;
+}&lt;/p&gt;
+
+&lt;p&gt;```
+ 
+  工厂模式用于解决实例化对象大量重复的问题，&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;构造型设计模式： 与对象组合有关，通常用于找出不同对象之间建立关系的简单方法。主要包括外观模式，适配器模式，代理模式。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;行为设计模式：主要用于改善或简化不同对象之间的通信。主要包括中介者模式，观察者模式。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Mon, 21 Mar 2016 09:42:06 +0800</pubDate>
+        <link>http://didiaidada.win//javascript/2016/03/21/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html</link>
+        <guid isPermaLink="true">http://didiaidada.win//javascript/2016/03/21/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html</guid>
+        
+        
+        <category>JavaScript</category>
+        
+      </item>
     
       <item>
         <title>Test10</title>
@@ -119,21 +167,6 @@
         
         
         <category>test2</category>
-        
-      </item>
-    
-      <item>
-        <title>test1</title>
-        <description>
-</description>
-        <pubDate>Sun, 20 Mar 2016 21:36:59 +0800</pubDate>
-        <link>http://didiaidada.win//test1/2016/03/20/test1.html</link>
-        <guid isPermaLink="true">http://didiaidada.win//test1/2016/03/20/test1.html</guid>
-        
-        <category>test1</category>
-        
-        
-        <category>test1</category>
         
       </item>
     

@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+
+
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -11,5 +13,11 @@ layout: default
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
+<script>
+  var tags = document.getElementsByTagName('code');
+  for(var i in tags) {
+    tags[i].setAttribute("class", "hljs");
+  }
 
+</script>
 </article>
