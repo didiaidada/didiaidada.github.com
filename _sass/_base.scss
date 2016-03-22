@@ -174,8 +174,14 @@ header .wrapper{
     margin-left: auto;
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
+  -webkit-box-shadow: 3px 3px 3px;
+  -moz-box-shadow: 3px 3px 3px;
+  box-shadow: 3px 3px 3px;
+  -moz-border-radius: 15px;      /* Gecko browsers */
+  -webkit-border-radius: 15px;   /* Webkit browsers */
+  border-radius:15px;
 
-    @extend %clearfix;
+  @extend %clearfix;
 
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
