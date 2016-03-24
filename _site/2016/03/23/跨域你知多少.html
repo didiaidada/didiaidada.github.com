@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>跨域你知多少</title>
+  <meta name="description" content="什么是跨域？">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/markdown.min.css">
+  <link rel="canonical" href="http://didiaidada.win//2016/03/23/%E8%B7%A8%E5%9F%9F%E4%BD%A0%E7%9F%A5%E5%A4%9A%E5%B0%91.html">
+  <link rel="alternate" type="application/rss+xml" title="DanX" href="http://didiaidada.win//feed.xml">
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+
+  <body  style="background-image: url('/img/post-bg-newBlog.jpg') ;">
+
+    <header class="intro-header " >
+  <div class="container">
+    <a class="site-title" href="/">DanX</a>
+
+        
+        
+        <a class="site-nav" href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+        <div class="site-heading">
+          <span class="subheading">总是走在漫长的路上</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">跨域你知多少</h1>
+    <p class="post-meta"><time datetime="2016-03-23T17:10:43+08:00" itemprop="datePublished">Mar 23, 2016</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">danX</span></span></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h4 id="section">什么是跨域？</h4>
+
+<h4 id="section-1">这里的域指的是什么？</h4>
+<p>这里的域指的就是『同源策略』，同源策略限制了一个源（origin）中加载文本或脚本与来自其它源(origin)中资源的交互方式。这两个源必须是同协议，同域名，同端口。
+<br />
+#### 如何跨域？</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>目前比较推荐的有两种方法：CORS(Cross-Origin Resource Sharing),JSONP
+</code></pre>
+</div>
+
+<h4 id="cors"><strong>CORS</strong></h4>
+<blockquote>
+  <p>跨源资源共享的思想是使用自定义的HTTP头部信息让浏览器与服务器进行沟通，从而决定请求是失败还是成功。</p>
+</blockquote>
+
+<p>具体来说，让服务器通过新增响应Access-Control-Allow-Origin，通过HTTP方式来实现资源共享，它使用了HTTP交互方式来确定请求源是否有资格请求该资源，并通过设置HTTP Header来控制访问资源的权限的权限。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//case1:前端发送请求(前端所在的域名http://www.didiaidada.win)
+var xhr = new XMLHttpRequest();
+xhr.open("get","http://www.baidu.com/dan.json");
+xhr.send();
+
+//如果在服务器端设置HTTP响应头{Access-Control-Allow-Origin:"http://www.baidu.com/"},那么跨域请求成功。就是CORS的一个实现。
+</code></pre>
+</div>
+<p>如果要检测XHR是否支持CORS，最简单的方法是检查是否存在withCredentials属性(判断请求中是否有cookie)。</p>
+
+<h4 id="jsonp"><strong>JSONP</strong></h4>
+
+<blockquote>
+  <p>通过jsonp跨域。也就是script标签跨域。script标签可以加载异域的JavaScript并执行，可以通过预先设定好的返回函数和母页面交互。</p>
+</blockquote>
+
+<p>这个协议的一个要点就是允许用户传递一个callback参数给服务端，然后服务端返回数据时会将这个callback参数作为函数名来包裹住JSON数据。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//原生JS的实现
+&lt;script&gt;
+var danTest = function(data){
+   //可以访问data的相关属性，eg:data.name data.place
+}
+var url = "http://www.didiaidada.win/json/test.html?callback=danTest";
+var script = document.createElement('script');
+script.setAttribute("src",url);
+document.body.insertBefore(script,document.body.firstChild);
+&lt;/script&gt;
+//jQuery的实现
+&lt;script&gt;
+$.ajax({
+    type: "get",
+    async: false,
+    url: "http://www.didiaidada.win/json/test.html",
+    dataType: "jsonp",
+    jsonp: "callback",//用以获得jsonp回调函数的参数名
+    jsonpCallback: "danTest",//自定义的jsonp回调函数名，默认为jQuery自动生成的随机函数名，也可以是“？”，jQuery会自动处理数据
+    success: function(data){
+    //可以访问data的相关属性，eg:data.name data.place
+    },
+    error: function(){
+    //处理错误
+    }
+    });
+&lt;/script&gt;
+</code></pre>
+</div>
+
+<h4 id="tips">tips</h4>
+
+<ol>
+  <li>jsonp只能处理get请求，CORS可以处理restful</li>
+  <li>虽然jQuery将jsonp作为ajax的一种进行了封装，但是二者本质上不同。ajax的核心是通过XMLHttpRequest获取非本页内容，而jsonp的核心是动态添加<script>标签来调用服务器提供的js脚本。</script></li>
+  <li>目前jsonp的应用最广，CORS还存在着浏览器的兼容性问题</li>
+  <li>HTML5新添加的window.postMessage(),window.name,document.domain也都可以一定程度上的实现跨域</li>
+</ol>
+
+<h4 id="section-2">参考文献</h4>
+<hr />
+<ol>
+  <li><a href="http://my.oschina.net/blogshi/blog/303758">Angular通过CORS实现跨域方案</a></li>
+  <li><a href="https://segmentfault.com/a/1190000003710973">浏览器和服务器实现跨域（CORS）判定的原理</a></li>
+  <li><a href="https://segmentfault.com/a/1190000003710973">【原创】说说JSON和JSONP，也许你会豁然开朗，含jQuery用例</a></li>
+</ol>
+
+  </div>
+<script>
+  var tags = document.getElementsByTagName('code');
+  for(var i in tags) {
+    tags[i].setAttribute("class", "hljs");
+  }
+
+</script>
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper1">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+
+      </div>
+
+      <div class="footer-col footer-col-2">
+
+      </div>
+
+      <div class="footer-col footer-col-3">
+
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
