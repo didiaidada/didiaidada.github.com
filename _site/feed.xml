@@ -5,8 +5,8 @@
     <description></description>
     <link>http://didiaidada.win//</link>
     <atom:link href="http://didiaidada.win//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Mar 2016 17:56:23 +0800</pubDate>
-    <lastBuildDate>Sat, 26 Mar 2016 17:56:23 +0800</lastBuildDate>
+    <pubDate>Sat, 26 Mar 2016 18:01:35 +0800</pubDate>
+    <lastBuildDate>Sat, 26 Mar 2016 18:01:35 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -105,6 +105,12 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
+&lt;h4 id=&quot;section-2&quot;&gt;参考文献&lt;/h4&gt;
+
+&lt;hr /&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/lee_magnum/article/details/17791701&quot;&gt;HTML5实战与剖析之原生拖拽(二拖拽事件dragstart、drag和dragend)&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         <pubDate>Sat, 26 Mar 2016 15:51:21 +0800</pubDate>
         <link>http://didiaidada.win//2016/03/26/html5%E7%94%9F%E6%8B%96%E6%8B%BD.html</link>
