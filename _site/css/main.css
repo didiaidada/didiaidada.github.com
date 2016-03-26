@@ -88,12 +88,13 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: #828282;
-  border-left: 4px solid #e8e8e8;
+  color: #651247;
+  border-left: 4px solid #e8401a;
   padding-left: 15px;
   font-size: 18px;
   letter-spacing: -1px;
-  font-style: italic; }
+  font-style: italic;
+  margin-bottom: 10px; }
   blockquote > :last-child {
     margin-bottom: 0; }
 

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML5原生拖放</title>
+  <meta name="description" content="  拖放事件最关键的地方确定哪里发送了拖放事件，有哪些事件是在被拖放的元素上触发的，而有哪些事件是在放置目标上触发的">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/markdown.min.css">
+  <link rel="canonical" href="http://didiaidada.win//2016/03/26/html5%E7%94%9F%E6%8B%96%E6%8B%BD.html">
+  <link rel="alternate" type="application/rss+xml" title="DanX" href="http://didiaidada.win//feed.xml">
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+
+  <body  style="background-image: url('/img/post-bg-newBlog.jpg') ;">
+
+    <header class="intro-header " >
+  <div class="container">
+    <a class="site-title" href="/">DanX</a>
+
+        
+        
+        <a class="site-nav" href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+        <div class="site-heading">
+          <span class="subheading">总是走在漫长的路上</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">HTML5原生拖放</h1>
+    <p class="post-meta"><time datetime="2016-03-26T15:51:21+08:00" itemprop="datePublished">Mar 26, 2016</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">danX</span></span></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <blockquote>
+  <p>拖放事件最关键的地方确定哪里发送了拖放事件，有哪些事件是在被拖放的元素上触发的，而有哪些事件是在放置目标上触发的</p>
+</blockquote>
+
+<h4 id="section">推动元素触发的事件</h4>
+
+<ol>
+  <li>dragstart - 按下鼠标时触发该事件</li>
+  <li>drag - 鼠标拖动期间持续触发</li>
+  <li>dragend - 拖动停止是触发</li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="section-1">被拖动元素被放到一个有效的放置目标上，触发的事件</h4>
+
+<ol>
+  <li>dragenter - 有元素被拖动到放置目标</li>
+  <li>dragover - 被拖动元素在放置目标内移动</li>
+  <li>dragleave或drop - 元素被放到了放置目标中</li>
+</ol>
+
+<p>有的元素不支持放置目标事件，需要重写dragenter和dragover的默认事件。</p>
+
+<p><br /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+  &lt;style&gt;
+    li{ width:100px; height:30px; border:1px #000000 solid; margin:20px; list-style:none;}
+    #div1{ width:100px; height:100px; background:red; margin:300px;}
+
+  &lt;/style&gt;
+
+&lt;ul&gt;
+  &lt;li draggable="true"&gt;dandan&lt;/li&gt;
+  &lt;li draggable="true"&gt;junjun&lt;/li&gt;
+  &lt;li draggable="true"&gt;jenny&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id="div1"&gt;try&lt;/div&gt;
+&lt;script&gt;
+   var aLi = document.getElementsByTagName("li"),
+       oDiv = document.getElementById("div1"),
+       iNow = 0;
+
+
+
+   for(var i=0;i&lt;aLi.length;i++){
+     aLi[i].ondragstart = function(){ //拖拽前触发
+
+       this.style.background = 'yellow';
+
+     };
+
+     aLi[i].ondragend = function(){  //拖拽结束触发
+
+       this.style.background = '';
+
+     };
+   }
+   oDiv.ondragenter = function(ev){  //相当于onmouseover
+
+     this.style.background = 'green';
+
+     ev.preventDefault();  //阻止默认事件：元素就可以释放了
+
+   };
+
+   oDiv.ondragleave = function(){  //相当于onmouseout
+
+     this.style.background = 'red';
+
+   };
+
+   oDiv.ondragover = function(ev){ //进入目标、离开目标之间，连续触发
+
+     ev.preventDefault();  //阻止默认事件：元素就可以释放了
+
+     document.title = iNow++;
+
+   };
+
+   oDiv.ondrop = function(ev){  //释放鼠标的时候触发
+
+     this.style.background = 'red';
+
+     alert("鼠标已经释放");
+
+     ev.preventDefault();  //阻止默认事件：防止打开拖拽元素的url
+
+   };
+&lt;/script&gt;
+</code></pre>
+</div>
+
+
+  </div>
+<script>
+  var tags = document.getElementsByTagName('code');
+  for(var i in tags) {
+    tags[i].setAttribute("class", "hljs");
+  }
+
+</script>
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper1">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+
+      </div>
+
+      <div class="footer-col footer-col-2">
+
+      </div>
+
+      <div class="footer-col footer-col-3">
+
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

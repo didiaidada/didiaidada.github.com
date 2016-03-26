@@ -5,9 +5,115 @@
     <description></description>
     <link>http://didiaidada.win//</link>
     <atom:link href="http://didiaidada.win//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Mar 2016 14:49:47 +0800</pubDate>
-    <lastBuildDate>Sat, 26 Mar 2016 14:49:47 +0800</lastBuildDate>
+    <pubDate>Sat, 26 Mar 2016 17:56:23 +0800</pubDate>
+    <lastBuildDate>Sat, 26 Mar 2016 17:56:23 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>HTML5原生拖放</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;拖放事件最关键的地方确定哪里发送了拖放事件，有哪些事件是在被拖放的元素上触发的，而有哪些事件是在放置目标上触发的&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;section&quot;&gt;推动元素触发的事件&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;dragstart - 按下鼠标时触发该事件&lt;/li&gt;
+  &lt;li&gt;drag - 鼠标拖动期间持续触发&lt;/li&gt;
+  &lt;li&gt;dragend - 拖动停止是触发&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;section-1&quot;&gt;被拖动元素被放到一个有效的放置目标上，触发的事件&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;dragenter - 有元素被拖动到放置目标&lt;/li&gt;
+  &lt;li&gt;dragover - 被拖动元素在放置目标内移动&lt;/li&gt;
+  &lt;li&gt;dragleave或drop - 元素被放到了放置目标中&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;有的元素不支持放置目标事件，需要重写dragenter和dragover的默认事件。&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+  &amp;lt;style&amp;gt;
+    li{ width:100px; height:30px; border:1px #000000 solid; margin:20px; list-style:none;}
+    #div1{ width:100px; height:100px; background:red; margin:300px;}
+
+  &amp;lt;/style&amp;gt;
+
+&amp;lt;ul&amp;gt;
+  &amp;lt;li draggable=&quot;true&quot;&amp;gt;dandan&amp;lt;/li&amp;gt;
+  &amp;lt;li draggable=&quot;true&quot;&amp;gt;junjun&amp;lt;/li&amp;gt;
+  &amp;lt;li draggable=&quot;true&quot;&amp;gt;jenny&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;div id=&quot;div1&quot;&amp;gt;try&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+   var aLi = document.getElementsByTagName(&quot;li&quot;),
+       oDiv = document.getElementById(&quot;div1&quot;),
+       iNow = 0;
+
+
+
+   for(var i=0;i&amp;lt;aLi.length;i++){
+     aLi[i].ondragstart = function(){ //拖拽前触发
+
+       this.style.background = &#39;yellow&#39;;
+
+     };
+
+     aLi[i].ondragend = function(){  //拖拽结束触发
+
+       this.style.background = &#39;&#39;;
+
+     };
+   }
+   oDiv.ondragenter = function(ev){  //相当于onmouseover
+
+     this.style.background = &#39;green&#39;;
+
+     ev.preventDefault();  //阻止默认事件：元素就可以释放了
+
+   };
+
+   oDiv.ondragleave = function(){  //相当于onmouseout
+
+     this.style.background = &#39;red&#39;;
+
+   };
+
+   oDiv.ondragover = function(ev){ //进入目标、离开目标之间，连续触发
+
+     ev.preventDefault();  //阻止默认事件：元素就可以释放了
+
+     document.title = iNow++;
+
+   };
+
+   oDiv.ondrop = function(ev){  //释放鼠标的时候触发
+
+     this.style.background = &#39;red&#39;;
+
+     alert(&quot;鼠标已经释放&quot;);
+
+     ev.preventDefault();  //阻止默认事件：防止打开拖拽元素的url
+
+   };
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 26 Mar 2016 15:51:21 +0800</pubDate>
+        <link>http://didiaidada.win//2016/03/26/html5%E7%94%9F%E6%8B%96%E6%8B%BD.html</link>
+        <guid isPermaLink="true">http://didiaidada.win//2016/03/26/html5%E7%94%9F%E6%8B%96%E6%8B%BD.html</guid>
+        
+        <category>JavaScript</category>
+        
+        
+      </item>
     
       <item>
         <title>跨域你知多少</title>
@@ -91,7 +197,7 @@ $.ajax({
     &lt;p&gt;XDM(cross-document messaging 夸文档消息传递)的核心是postMessage()，这个方法接受两个参数，一条消息和一个表示消息接收方来自哪个域的字符串。
 接收到XDM消息时，会触发window对象的message事件。&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//A的域名为“http://www.didiaidada.win”;B的域名为“http://www.baidu.com”,A要向B发送消失
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//A的域名为“http://www.didiaidada.win”;B的域名为“http://www.baidu.com”,A要向B发送消息
 //A的JS代码
 window.postMessage(&quot;A secret&quot;,&quot;http://www.baidu.com&quot;);
    
@@ -209,100 +315,45 @@ var single = ( function(){
       </item>
     
       <item>
-        <title>Test10</title>
-        <description>
+        <title>Web推送</title>
+        <description>&lt;h2 id=&quot;webdata&quot;&gt;Web应用从服务器主动推送Data到客户端有哪些方式&lt;/h2&gt;
+
+&lt;h3 id=&quot;javascript&quot;&gt;JavaScript数据推送&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;commet: 基于HTTP长连接服务器推送技术&lt;/li&gt;
+  &lt;li&gt;基于WebSocket的推送方案&lt;/li&gt;
+  &lt;li&gt;SSE(Server-Send Event) ：服务器推送数据方式&lt;/li&gt;
+&lt;/ul&gt;
 </description>
-        <pubDate>Sun, 20 Mar 2016 21:40:12 +0800</pubDate>
-        <link>http://didiaidada.win//2016/03/20/test10.html</link>
-        <guid isPermaLink="true">http://didiaidada.win//2016/03/20/test10.html</guid>
+        <pubDate>Sun, 20 Mar 2016 19:51:18 +0800</pubDate>
+        <link>http://didiaidada.win//javascript/web/2016/03/20/pull.html</link>
+        <guid isPermaLink="true">http://didiaidada.win//javascript/web/2016/03/20/pull.html</guid>
         
+        
+        <category>JavaScript</category>
+        
+        <category>Web</category>
         
       </item>
     
       <item>
-        <title>Test9</title>
-        <description>
+        <title>my new blog</title>
+        <description>&lt;p&gt;终于把我的博客从CSDN上迁出来了，目前是利用Jekyll在github pages上部署。
+感触有两点：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;利用Bash在Mac上安装Jekyll若遇到问题，要先更新Xcode&lt;/li&gt;
+  &lt;li&gt;目前用的博客模板是默认的，接下来会做更改。&lt;/li&gt;
+&lt;/ul&gt;
+
 </description>
-        <pubDate>Sun, 20 Mar 2016 21:40:01 +0800</pubDate>
-        <link>http://didiaidada.win//2016/03/20/test9.html</link>
-        <guid isPermaLink="true">http://didiaidada.win//2016/03/20/test9.html</guid>
+        <pubDate>Sun, 13 Mar 2016 17:02:42 +0800</pubDate>
+        <link>http://didiaidada.win//jekyll/2016/03/13/2016-03-13-new.html</link>
+        <guid isPermaLink="true">http://didiaidada.win//jekyll/2016/03/13/2016-03-13-new.html</guid>
         
         
-      </item>
-    
-      <item>
-        <title>Test8</title>
-        <description>
-</description>
-        <pubDate>Sun, 20 Mar 2016 21:39:53 +0800</pubDate>
-        <link>http://didiaidada.win//2016/03/20/test8.html</link>
-        <guid isPermaLink="true">http://didiaidada.win//2016/03/20/test8.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Test7</title>
-        <description>
-</description>
-        <pubDate>Sun, 20 Mar 2016 21:39:39 +0800</pubDate>
-        <link>http://didiaidada.win//2016/03/20/test7.html</link>
-        <guid isPermaLink="true">http://didiaidada.win//2016/03/20/test7.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Test6</title>
-        <description>
-</description>
-        <pubDate>Sun, 20 Mar 2016 21:39:30 +0800</pubDate>
-        <link>http://didiaidada.win//2016/03/20/test6.html</link>
-        <guid isPermaLink="true">http://didiaidada.win//2016/03/20/test6.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>test</title>
-        <description>
-</description>
-        <pubDate>Sun, 20 Mar 2016 21:38:26 +0800</pubDate>
-        <link>http://didiaidada.win//test/2016/03/20/test5.html</link>
-        <guid isPermaLink="true">http://didiaidada.win//test/2016/03/20/test5.html</guid>
-        
-        <category>test</category>
-        
-        
-        <category>test</category>
-        
-      </item>
-    
-      <item>
-        <title>test4</title>
-        <description>
-</description>
-        <pubDate>Sun, 20 Mar 2016 21:38:15 +0800</pubDate>
-        <link>http://didiaidada.win//test/2016/03/20/test4.html</link>
-        <guid isPermaLink="true">http://didiaidada.win//test/2016/03/20/test4.html</guid>
-        
-        
-        <category>test</category>
-        
-      </item>
-    
-      <item>
-        <title>test3</title>
-        <description>
-</description>
-        <pubDate>Sun, 20 Mar 2016 21:37:41 +0800</pubDate>
-        <link>http://didiaidada.win//test3/2016/03/20/test3.html</link>
-        <guid isPermaLink="true">http://didiaidada.win//test3/2016/03/20/test3.html</guid>
-        
-        <category>test3</category>
-        
-        
-        <category>test3</category>
+        <category>Jekyll</category>
         
       </item>
     
