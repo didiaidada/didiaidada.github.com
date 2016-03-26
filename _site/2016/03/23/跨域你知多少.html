@@ -67,9 +67,11 @@
     <h4 id="section">什么是跨域？</h4>
 
 <h4 id="section-1">这里的域指的是什么？</h4>
-<p>这里的域指的就是『同源策略』，同源策略限制了一个源（origin）中加载文本或脚本与来自其它源(origin)中资源的交互方式。这两个源必须是同协议，同域名，同端口。
-<br />
-#### 如何跨域？</p>
+<p>这里的域指的就是『同源策略』，同源策略限制了一个源（origin）中加载文本或脚本与来自其它源(origin)中资源的交互方式。这两个源必须是同协议，同域名，同端口。</p>
+
+<p><br /></p>
+
+<h4 id="section-2">如何跨域？</h4>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>目前比较推荐的有两种方法：CORS(Cross-Origin Resource Sharing),JSONP
 </code></pre>
@@ -136,10 +138,31 @@ $.ajax({
   <li>jsonp只能处理get请求，CORS可以处理restful</li>
   <li>虽然jQuery将jsonp作为ajax的一种进行了封装，但是二者本质上不同。ajax的核心是通过XMLHttpRequest获取非本页内容，而jsonp的核心是动态添加<script>标签来调用服务器提供的js脚本。</script></li>
   <li>目前jsonp的应用最广，CORS还存在着浏览器的兼容性问题</li>
-  <li>HTML5新添加的window.postMessage(),window.name,document.domain也都可以一定程度上的实现跨域</li>
+  <li>
+    <p>HTML5新添加的window.postMessage(),window.name,document.domain也都可以一定程度上的实现跨域</p>
+
+    <p>XDM(cross-document messaging 夸文档消息传递)的核心是postMessage()，这个方法接受两个参数，一条消息和一个表示消息接收方来自哪个域的字符串。
+接收到XDM消息时，会触发window对象的message事件。</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>//A的域名为“http://www.didiaidada.win”;B的域名为“http://www.baidu.com”,A要向B发送消失
+//A的JS代码
+window.postMessage("A secret","http://www.baidu.com");
+   
+//B的JS代码
+EventUtil.addHandler(window,"message",function(event){
+     if(event.origin == "http://www.didiaidada.win"){
+         processMessage(event.data);
+         event.source.postMessage("received","http://www.didiaidada.win");
+     }
+})
+   
+   
+</code></pre>
+    </div>
+  </li>
 </ol>
 
-<h4 id="section-2">参考文献</h4>
+<h4 id="section-3">参考文献</h4>
 <hr />
 <ol>
   <li><a href="http://my.oschina.net/blogshi/blog/303758">Angular通过CORS实现跨域方案</a></li>
