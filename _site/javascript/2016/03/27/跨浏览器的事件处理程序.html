@@ -81,37 +81,56 @@
 1. 事件处理程序名称
 2. 事件处理程序函数</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var EventUtil = {
+<p>DOM的事件对象是<code class="highlighter-rouge">event</code>,IE的事件对象是<code class="highlighter-rouge">window.event</code>。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">EventUtil</span> <span class="o">=</span> <span class="p">{</span>
  
-  addHandler: function(element, type, handler){
-     if(element.addEventListener){
-        element.addEventListener(type, handler, false);
-     }else if(element.attachEvent){
-        element.attachEvent("on"+type, handler);
-     }else{
-        element["on" + type] = handler;
-     } 
-  },
-  removeHandler: function(element, type, handler){
-     if(element.removeEventListener){
-        element.removeEventListener(type, handler, false);
-     }else if(element.detachEvent){
-        element.detachEvent("on"+type, handler);
-     }else{
-        element["on" + type] = handler;
-     }
-  }
-};
+  <span class="na">addHandler</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">type</span><span class="p">,</span> <span class="nx">handler</span><span class="p">){</span>
+     <span class="k">if</span><span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">){</span>
+        <span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+     <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">){</span>
+        <span class="nx">element</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">(</span><span class="s2">"on"</span><span class="o">+</span><span class="nx">type</span><span class="p">,</span> <span class="nx">handler</span><span class="p">);</span>
+     <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="nx">element</span><span class="p">[</span><span class="s2">"on"</span> <span class="o">+</span> <span class="nx">type</span><span class="p">]</span> <span class="o">=</span> <span class="nx">handler</span><span class="p">;</span>
+     <span class="p">}</span> 
+  <span class="p">},</span>
+  <span class="na">removeHandler</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">type</span><span class="p">,</span> <span class="nx">handler</span><span class="p">){</span>
+     <span class="k">if</span><span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">){</span>
+        <span class="nx">element</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+     <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">detachEvent</span><span class="p">){</span>
+        <span class="nx">element</span><span class="p">.</span><span class="nx">detachEvent</span><span class="p">(</span><span class="s2">"on"</span><span class="o">+</span><span class="nx">type</span><span class="p">,</span> <span class="nx">handler</span><span class="p">);</span>
+     <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="nx">element</span><span class="p">[</span><span class="s2">"on"</span> <span class="o">+</span> <span class="nx">type</span><span class="p">]</span> <span class="o">=</span> <span class="nx">handler</span><span class="p">;</span>
+     <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">};</span>
 </code></pre>
 </div>
+
+<h4 id="tips-">tips 使用事件时注意考虑内存与性能方面的问题</h4>
+
+<ol>
+  <li>有必要限制一个页面中的事件处理程序，数量太多回导致占用大量内存，而且也会让用户感觉页面反应不够灵敏</li>
+  <li>建立在事件冒泡机制之上的事件委托技术，可以有效地减少事件处理程序的数量</li>
+  <li>建议在浏览器卸载页面之前移除页面中的所以事件处理程序</li>
+</ol>
+
+<hr />
+
+<h4 id="section-1">参考</h4>
+
+<p>『JavaScript高级程序设计』</p>
 
 
   </div>
 <script>
-  var tags = document.getElementsByTagName('code');
-  for(var i in tags) {
-    tags[i].setAttribute("class", "hljs");
-  }
+  var pre = $("pre[class='highlight']"),
+      tags = pre.find("code");
+
+  pre.css({"margin-top":"10px","margin-bottom":"10px"});
+
+    tags.attr("class", "hljs");
+
 
 </script>
 </article>

@@ -5,8 +5,8 @@
     <description></description>
     <link>http://didiaidada.win//</link>
     <atom:link href="http://didiaidada.win//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Mar 2016 11:41:37 +0800</pubDate>
-    <lastBuildDate>Sun, 27 Mar 2016 11:41:37 +0800</lastBuildDate>
+    <pubDate>Sun, 27 Mar 2016 17:58:02 +0800</pubDate>
+    <lastBuildDate>Sun, 27 Mar 2016 17:58:02 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -30,29 +30,45 @@
 1. 事件处理程序名称
 2. 事件处理程序函数&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var EventUtil = {
+&lt;p&gt;DOM的事件对象是&lt;code class=&quot;highlighter-rouge&quot;&gt;event&lt;/code&gt;,IE的事件对象是&lt;code class=&quot;highlighter-rouge&quot;&gt;window.event&lt;/code&gt;。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;EventUtil&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
  
-  addHandler: function(element, type, handler){
-     if(element.addEventListener){
-        element.addEventListener(type, handler, false);
-     }else if(element.attachEvent){
-        element.attachEvent(&quot;on&quot;+type, handler);
-     }else{
-        element[&quot;on&quot; + type] = handler;
-     } 
-  },
-  removeHandler: function(element, type, handler){
-     if(element.removeEventListener){
-        element.removeEventListener(type, handler, false);
-     }else if(element.detachEvent){
-        element.detachEvent(&quot;on&quot;+type, handler);
-     }else{
-        element[&quot;on&quot; + type] = handler;
-     }
-  }
-};
+  &lt;span class=&quot;na&quot;&gt;addHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attachEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attachEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;on&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;on&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;removeHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;detachEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;detachEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;on&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;on&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;h4 id=&quot;tips-&quot;&gt;tips 使用事件时注意考虑内存与性能方面的问题&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;有必要限制一个页面中的事件处理程序，数量太多回导致占用大量内存，而且也会让用户感觉页面反应不够灵敏&lt;/li&gt;
+  &lt;li&gt;建立在事件冒泡机制之上的事件委托技术，可以有效地减少事件处理程序的数量&lt;/li&gt;
+  &lt;li&gt;建议在浏览器卸载页面之前移除页面中的所以事件处理程序&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;section-1&quot;&gt;参考&lt;/h4&gt;
+
+&lt;p&gt;『JavaScript高级程序设计』&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 27 Mar 2016 10:10:41 +0800</pubDate>
@@ -160,9 +176,10 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
+&lt;hr /&gt;
+
 &lt;h4 id=&quot;section-2&quot;&gt;参考文献&lt;/h4&gt;
 
-&lt;hr /&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/lee_magnum/article/details/17791701&quot;&gt;HTML5实战与剖析之原生拖拽(二拖拽事件dragstart、drag和dragend)&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -250,7 +267,7 @@ $.ajax({
 
 &lt;ol&gt;
   &lt;li&gt;jsonp只能处理get请求，CORS可以处理restful&lt;/li&gt;
-  &lt;li&gt;虽然jQuery将jsonp作为ajax的一种进行了封装，但是二者本质上不同。ajax的核心是通过XMLHttpRequest获取非本页内容，而jsonp的核心是动态添加&lt;script&gt;标签来调用服务器提供的js脚本。&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;虽然jQuery将jsonp作为ajax的一种进行了封装，但是二者本质上不同。ajax的核心是通过XMLHttpRequest获取非本页内容，而jsonp的核心是动态添加&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;script&amp;gt;&lt;/code&gt;标签来调用服务器提供的js脚本。&lt;/li&gt;
   &lt;li&gt;目前jsonp的应用最广，CORS还存在着浏览器的兼容性问题&lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;HTML5新添加的window.postMessage(),window.name,document.domain也都可以一定程度上的实现跨域&lt;/p&gt;
@@ -276,8 +293,10 @@ EventUtil.addHandler(window,&quot;message&quot;,function(event){
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;section-3&quot;&gt;参考文献&lt;/h4&gt;
 &lt;hr /&gt;
+
+&lt;h4 id=&quot;section-3&quot;&gt;参考文献&lt;/h4&gt;
+
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;http://my.oschina.net/blogshi/blog/303758&quot;&gt;Angular通过CORS实现跨域方案&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000003710973&quot;&gt;浏览器和服务器实现跨域（CORS）判定的原理&lt;/a&gt;&lt;/li&gt;

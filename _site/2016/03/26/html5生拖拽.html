@@ -156,19 +156,23 @@
 </code></pre>
 </div>
 
+<hr />
+
 <h4 id="section-2">参考文献</h4>
 
-<hr />
 <ol>
   <li><a href="http://blog.csdn.net/lee_magnum/article/details/17791701">HTML5实战与剖析之原生拖拽(二拖拽事件dragstart、drag和dragend)</a></li>
 </ol>
 
   </div>
 <script>
-  var tags = document.getElementsByTagName('code');
-  for(var i in tags) {
-    tags[i].setAttribute("class", "hljs");
-  }
+  var pre = $("pre[class='highlight']"),
+      tags = pre.find("code");
+
+  pre.css({"margin-top":"10px","margin-bottom":"10px"});
+
+    tags.attr("class", "hljs");
+
 
 </script>
 </article>

@@ -137,10 +137,13 @@ var single = ( function(){
 
   </div>
 <script>
-  var tags = document.getElementsByTagName('code');
-  for(var i in tags) {
-    tags[i].setAttribute("class", "hljs");
-  }
+  var pre = $("pre[class='highlight']"),
+      tags = pre.find("code");
+
+  pre.css({"margin-top":"10px","margin-bottom":"10px"});
+
+    tags.attr("class", "hljs");
+
 
 </script>
 </article>

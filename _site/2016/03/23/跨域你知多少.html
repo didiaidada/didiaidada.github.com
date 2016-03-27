@@ -134,7 +134,7 @@ $.ajax({
 
 <ol>
   <li>jsonp只能处理get请求，CORS可以处理restful</li>
-  <li>虽然jQuery将jsonp作为ajax的一种进行了封装，但是二者本质上不同。ajax的核心是通过XMLHttpRequest获取非本页内容，而jsonp的核心是动态添加<script>标签来调用服务器提供的js脚本。</script></li>
+  <li>虽然jQuery将jsonp作为ajax的一种进行了封装，但是二者本质上不同。ajax的核心是通过XMLHttpRequest获取非本页内容，而jsonp的核心是动态添加<code class="highlighter-rouge">&lt;script&gt;</code>标签来调用服务器提供的js脚本。</li>
   <li>目前jsonp的应用最广，CORS还存在着浏览器的兼容性问题</li>
   <li>
     <p>HTML5新添加的window.postMessage(),window.name,document.domain也都可以一定程度上的实现跨域</p>
@@ -160,8 +160,10 @@ EventUtil.addHandler(window,"message",function(event){
   </li>
 </ol>
 
-<h4 id="section-3">参考文献</h4>
 <hr />
+
+<h4 id="section-3">参考文献</h4>
+
 <ol>
   <li><a href="http://my.oschina.net/blogshi/blog/303758">Angular通过CORS实现跨域方案</a></li>
   <li><a href="https://segmentfault.com/a/1190000003710973">浏览器和服务器实现跨域（CORS）判定的原理</a></li>
@@ -170,10 +172,13 @@ EventUtil.addHandler(window,"message",function(event){
 
   </div>
 <script>
-  var tags = document.getElementsByTagName('code');
-  for(var i in tags) {
-    tags[i].setAttribute("class", "hljs");
-  }
+  var pre = $("pre[class='highlight']"),
+      tags = pre.find("code");
+
+  pre.css({"margin-top":"10px","margin-bottom":"10px"});
+
+    tags.attr("class", "hljs");
+
 
 </script>
 </article>
