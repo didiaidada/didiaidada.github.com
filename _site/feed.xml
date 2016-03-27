@@ -5,9 +5,64 @@
     <description></description>
     <link>http://didiaidada.win//</link>
     <atom:link href="http://didiaidada.win//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Mar 2016 18:01:35 +0800</pubDate>
-    <lastBuildDate>Sat, 26 Mar 2016 18:01:35 +0800</lastBuildDate>
+    <pubDate>Sun, 27 Mar 2016 11:41:37 +0800</pubDate>
+    <lastBuildDate>Sun, 27 Mar 2016 11:41:37 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>跨浏览器的事件处理程序</title>
+        <description>&lt;h4 id=&quot;section&quot;&gt;跨浏览器的事件处理程序&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;IE中所有的DOM对象都是以COM（组件对象模型）对象的形式实现，而其他浏览器的DOM对象遵循W3C标准，这意味着IE中的DOM对象与原生Javascript对象的行为或活动特点并不一致。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;dom2&quot;&gt;DOM2级事件处理程序&lt;/h4&gt;
+
+&lt;p&gt;『DOM2级事件』定义了两个方法，用于处理指定和删除事件处理程序的操作：&lt;code class=&quot;highlighter-rouge&quot;&gt;addEventListener()&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;removeEventListener()&lt;/code&gt;，并且它们都接受三个参数：
+1. 要处理的事件名
+2. 作为事件处理程序的函数
+3. 一个布尔值，true - 表示在捕获阶段调用事件处理程序；false - 表示在冒泡阶段调用事件处理程序&lt;/p&gt;
+
+&lt;h4 id=&quot;ieieopera&quot;&gt;IE事件处理程序（IE和Opera）&lt;/h4&gt;
+
+&lt;p&gt;IE实现了与DOM类似的两个方法：&lt;code class=&quot;highlighter-rouge&quot;&gt;attachEvent()&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;detachEvent()&lt;/code&gt;，这两个方法接受两个参数
+1. 事件处理程序名称
+2. 事件处理程序函数&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var EventUtil = {
+ 
+  addHandler: function(element, type, handler){
+     if(element.addEventListener){
+        element.addEventListener(type, handler, false);
+     }else if(element.attachEvent){
+        element.attachEvent(&quot;on&quot;+type, handler);
+     }else{
+        element[&quot;on&quot; + type] = handler;
+     } 
+  },
+  removeHandler: function(element, type, handler){
+     if(element.removeEventListener){
+        element.removeEventListener(type, handler, false);
+     }else if(element.detachEvent){
+        element.detachEvent(&quot;on&quot;+type, handler);
+     }else{
+        element[&quot;on&quot; + type] = handler;
+     }
+  }
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sun, 27 Mar 2016 10:10:41 +0800</pubDate>
+        <link>http://didiaidada.win//javascript/2016/03/27/%E8%B7%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E7%A8%8B%E5%BA%8F.html</link>
+        <guid isPermaLink="true">http://didiaidada.win//javascript/2016/03/27/%E8%B7%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E7%A8%8B%E5%BA%8F.html</guid>
+        
+        
+        <category>JavaScript</category>
+        
+      </item>
     
       <item>
         <title>HTML5原生拖放</title>
