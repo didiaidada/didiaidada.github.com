@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>跨浏览器的事件处理程序</title>
+  <meta name="description" content="跨浏览器的事件处理程序">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/markdown.min.css">
+  <link rel="canonical" href="http://didiaidada.win//javascript/2016/03/27/%E8%B7%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E7%A8%8B%E5%BA%8F.html">
+  <link rel="alternate" type="application/rss+xml" title="DanX" href="http://didiaidada.win//feed.xml">
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+
+  <body  style="background-image: url('/img/post-bg-newBlog.jpg') ;">
+
+    <header class="intro-header " >
+  <div class="container">
+    <a class="site-title" href="/">DanX</a>
+
+        
+        
+        <a class="site-nav" href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+        <div class="site-heading">
+          <span class="subheading">总是走在漫长的路上</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">跨浏览器的事件处理程序</h1>
+    <p class="post-meta"><time datetime="2016-03-27T10:10:41+08:00" itemprop="datePublished">Mar 27, 2016</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">danX</span></span></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h4 id="section">跨浏览器的事件处理程序</h4>
+
+<blockquote>
+  <p>IE中所有的DOM对象都是以COM（组件对象模型）对象的形式实现，而其他浏览器的DOM对象遵循W3C标准，这意味着IE中的DOM对象与原生Javascript对象的行为或活动特点并不一致。</p>
+</blockquote>
+
+<h4 id="dom2">DOM2级事件处理程序</h4>
+
+<p>『DOM2级事件』定义了两个方法，用于处理指定和删除事件处理程序的操作：<code class="highlighter-rouge">addEventListener()</code>,<code class="highlighter-rouge">removeEventListener()</code>，并且它们都接受三个参数：
+1. 要处理的事件名
+2. 作为事件处理程序的函数
+3. 一个布尔值，true - 表示在捕获阶段调用事件处理程序；false - 表示在冒泡阶段调用事件处理程序</p>
+
+<h4 id="ieieopera">IE事件处理程序（IE和Opera）</h4>
+
+<p>IE实现了与DOM类似的两个方法：<code class="highlighter-rouge">attachEvent()</code>,<code class="highlighter-rouge">detachEvent()</code>，这两个方法接受两个参数
+1. 事件处理程序名称
+2. 事件处理程序函数</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var EventUtil = {
+ 
+  addHandler: function(element, type, handler){
+     if(element.addEventListener){
+        element.addEventListener(type, handler, false);
+     }else if(element.attachEvent){
+        element.attachEvent("on"+type, handler);
+     }else{
+        element["on" + type] = handler;
+     } 
+  },
+  removeHandler: function(element, type, handler){
+     if(element.removeEventListener){
+        element.removeEventListener(type, handler, false);
+     }else if(element.detachEvent){
+        element.detachEvent("on"+type, handler);
+     }else{
+        element["on" + type] = handler;
+     }
+  }
+};
+</code></pre>
+</div>
+
+
+  </div>
+<script>
+  var tags = document.getElementsByTagName('code');
+  for(var i in tags) {
+    tags[i].setAttribute("class", "hljs");
+  }
+
+</script>
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper1">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+
+      </div>
+
+      <div class="footer-col footer-col-2">
+
+      </div>
+
+      <div class="footer-col footer-col-3">
+
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
