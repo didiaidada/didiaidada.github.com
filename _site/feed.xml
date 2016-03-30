@@ -5,8 +5,8 @@
     <description></description>
     <link>http://didiaidada.win//</link>
     <atom:link href="http://didiaidada.win//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 30 Mar 2016 21:05:59 +0800</pubDate>
-    <lastBuildDate>Wed, 30 Mar 2016 21:05:59 +0800</lastBuildDate>
+    <pubDate>Wed, 30 Mar 2016 21:50:44 +0800</pubDate>
+    <lastBuildDate>Wed, 30 Mar 2016 21:50:44 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -204,23 +204,21 @@ r2.exec(s) // null
   &lt;li&gt;函数的参数可以设置默认值&lt;/li&gt;
   &lt;li&gt;ES6引入rest参数(…变量名)，rest参数搭配的变量是一个数组，该变量将多余的参数放入数组中。&lt;/li&gt;
   &lt;li&gt;扩展运算符(…)，它好比rest参数的逆运算。&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;ES6允许使用“箭头”（=&amp;gt;）定义函数。“箭头”前的为函数的输入，“箭头”后为函数的输出。&lt;/p&gt;
-
-    &lt;p&gt;```
- var f = () =&amp;gt; 5; 
- // 等同于
- var f = function (){ return 5 };&lt;/p&gt;
-
-    &lt;p&gt;var sum = (num1, num2) =&amp;gt; num1 + num2;
- // 等同于
- var sum = function(num1, num2) {
-     return num1 + num2;
- };&lt;/p&gt;
-
-    &lt;p&gt;```&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;ES6允许使用“箭头”（=&amp;gt;）定义函数。“箭头”前的为函数的输入，“箭头”后为函数的输出。&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    
+var f = () =&amp;gt; 5; 
+// 等同于
+var f = function (){ return 5 };
+var sum = (num1, num2) =&amp;gt; num1 + num2;
+ // 等同于
+var sum = function(num1, num2) {
+     return num1 + num2;
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 

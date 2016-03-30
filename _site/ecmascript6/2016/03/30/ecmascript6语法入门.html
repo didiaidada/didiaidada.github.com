@@ -255,23 +255,21 @@ r2.exec(s) // null
   <li>函数的参数可以设置默认值</li>
   <li>ES6引入rest参数(…变量名)，rest参数搭配的变量是一个数组，该变量将多余的参数放入数组中。</li>
   <li>扩展运算符(…)，它好比rest参数的逆运算。</li>
-  <li>
-    <p>ES6允许使用“箭头”（=&gt;）定义函数。“箭头”前的为函数的输入，“箭头”后为函数的输出。</p>
-
-    <p>```
- var f = () =&gt; 5; 
- // 等同于
- var f = function (){ return 5 };</p>
-
-    <p>var sum = (num1, num2) =&gt; num1 + num2;
- // 等同于
- var sum = function(num1, num2) {
-     return num1 + num2;
- };</p>
-
-    <p>```</p>
-  </li>
+  <li>ES6允许使用“箭头”（=&gt;）定义函数。“箭头”前的为函数的输入，“箭头”后为函数的输出。</li>
 </ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    
+var f = () =&gt; 5; 
+// 等同于
+var f = function (){ return 5 };
+var sum = (num1, num2) =&gt; num1 + num2;
+ // 等同于
+var sum = function(num1, num2) {
+     return num1 + num2;
+};
+
+</code></pre>
+</div>
 
 <p><br /></p>
 
