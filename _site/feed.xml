@@ -5,9 +5,129 @@
     <description></description>
     <link>http://didiaidada.win//</link>
     <atom:link href="http://didiaidada.win//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 30 Mar 2016 21:50:44 +0800</pubDate>
-    <lastBuildDate>Wed, 30 Mar 2016 21:50:44 +0800</lastBuildDate>
+    <pubDate>Sun, 03 Apr 2016 22:53:02 +0800</pubDate>
+    <lastBuildDate>Sun, 03 Apr 2016 22:53:02 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>前端实习面试 小猿</title>
+        <description>&lt;h4 id=&quot;section&quot;&gt;小米&lt;/h4&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;面的是小米UI黄页组,很突然4月1号早上给我打电话,然后下午就过去了,甚至没有邮件~~~&lt;/p&gt;
+
+&lt;p&gt;问得东西很基础,我就说说我没答上的部分&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;宽高不固定的元素如何居中&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;宽度不固定,水平居中&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//父容器 text-align:center;
+//子容器 display:inline-block;
+
+.container{width:500px;height:80px;background:#C2300B;margin-left:50px;padding-top:10px;text-align:center;}
+.center{display:inline-block;border:2px solid #fff;}
+.center{_display:inline;} /*针对ie6 hack*/
+.center a{float:left;border:1px solid #fff;padding:5px 10px;margin:10px;color:#fff;text-decoration:none;}
+ &amp;lt;div class=&quot;container&quot;&amp;gt;
+     &amp;lt;div class=&quot;center&quot;&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;1&amp;lt;/a&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;2&amp;lt;/a&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;3&amp;lt;/a&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;4&amp;lt;/a&amp;gt;
+         &amp;lt;div style=&quot;clear:both&quot;&amp;gt;&amp;lt;/div&amp;gt;
+     &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;高度不固定,垂直居中&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//父容器 display:table;overflow:hidden;
+//子容器 display:table-cell;vertical-align:middle;
+
+#vc { display:table; background-color:#C2300B; width:500px; height:200px; overflow:hidden; margin-left:50px; _position:relative; }
+#vci { vertical-align:middle; display:table-cell; text-align:center; _position:absolute; _top:50%; _left:50%; }
+#content { color:#fff; border:1px solid #fff; display:inline-block; _position:relative; _top:-50%; _left:-50%; }
+&amp;lt;div id=&quot;vc&quot;&amp;gt;
+    &amp;lt;div id=&quot;vci&quot;&amp;gt;
+        &amp;lt;div id=&quot;content&quot;&amp;gt;
+    我们垂直居中了，我们水平居中了
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CSS3使用flex布局&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#parent {
+            display: flex;
+            width: 400px; /* 宽度值，随便啦 */
+            height: 400px;  /* 高度值，随便啦 */
+            background-color: yellow;
+        }
+
+#item {
+            width: 100px;/* 宽度值，随便啦 */
+            height: 20px;/* 高度值，随便啦 */
+            margin: auto;
+            background-color: red; /* Magic! */
+        }
+
+&amp;lt;div id=&quot;parent&quot;&amp;gt;
+    &amp;lt;div id=&quot;item&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;tips: &lt;strong&gt;flex box&lt;/strong&gt;
+猿题库也问了我这个,我当时答的不好,可以参考&lt;a href=&quot;http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html&quot;&gt;这个讲解&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;事件委托&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;使用事件委托技术能让你避免对特定的每个节点添加事件监听器；相反，事件监听器是被添加到它们的父元素上。事件监听器会分析从子元素冒泡上来的事件，找到是哪个子元素的事件。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;ul id=&quot;list&quot;&amp;gt;
+  &amp;lt;li id=&quot;item1&quot;&amp;gt;item1&amp;lt;/li&amp;gt;
+  &amp;lt;li id=&quot;item2&quot;&amp;gt;item2&amp;lt;/li&amp;gt;
+  &amp;lt;li id=&quot;item3&quot;&amp;gt;item3&amp;lt;/li&amp;gt;
+  &amp;lt;li id=&quot;item4&quot;&amp;gt;item4&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+window.onload=function(){
+  var ulNode=document.getElementById(&quot;list&quot;);
+  ulNode.addEventListener(&#39;click&#39;,function(e){
+       if(e.target&amp;amp;&amp;amp;e.target.nodeName.toUpperCase()==&quot;LI&quot;){/*判断目标事件是否为li*/
+         alert(e.target.innerHTML);
+       }
+     },false);
+
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sun, 03 Apr 2016 21:12:28 +0800</pubDate>
+        <link>http://didiaidada.win//2016/04/03/%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95-%E5%B0%8F%E7%8C%BF.html</link>
+        <guid isPermaLink="true">http://didiaidada.win//2016/04/03/%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95-%E5%B0%8F%E7%8C%BF.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>ECMAScript6  语法入门</title>

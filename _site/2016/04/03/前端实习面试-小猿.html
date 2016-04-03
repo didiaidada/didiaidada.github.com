@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>前端实习面试 小猿</title>
+  <meta name="description" content="小米">
+  <link rel="icon" type="image/png" href="/assets/img/dan.jpg">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/markdown.min.css">
+  <link rel="canonical" href="http://didiaidada.win//2016/04/03/%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95-%E5%B0%8F%E7%8C%BF.html">
+  <link rel="alternate" type="application/rss+xml" title="DanX" href="http://didiaidada.win//feed.xml">
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+
+  <body  style="background-image: url('/img/post-bg-newBlog.jpg') ;">
+
+    <header class="intro-header " >
+  <div class="container">
+    <a class="site-title" href="/">DanX</a>
+
+        
+        
+        <a class="site-nav" href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+        <div class="site-heading">
+          <span class="subheading">总是走在漫长的路上</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">前端实习面试 小猿</h1>
+    <p class="post-meta"><time datetime="2016-04-03T21:12:28+08:00" itemprop="datePublished">Apr 3, 2016</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">danX</span></span></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h4 id="section">小米</h4>
+
+<hr />
+
+<p><br /></p>
+
+<p>面的是小米UI黄页组,很突然4月1号早上给我打电话,然后下午就过去了,甚至没有邮件~~~</p>
+
+<p>问得东西很基础,我就说说我没答上的部分</p>
+
+<p><br /></p>
+
+<blockquote>
+  <p>宽高不固定的元素如何居中</p>
+</blockquote>
+
+<ol>
+  <li>
+    <p>宽度不固定,水平居中</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>//父容器 text-align:center;
+//子容器 display:inline-block;
+
+.container{width:500px;height:80px;background:#C2300B;margin-left:50px;padding-top:10px;text-align:center;}
+.center{display:inline-block;border:2px solid #fff;}
+.center{_display:inline;} /*针对ie6 hack*/
+.center a{float:left;border:1px solid #fff;padding:5px 10px;margin:10px;color:#fff;text-decoration:none;}
+ &lt;div class="container"&gt;
+     &lt;div class="center"&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;a href="#"&gt;4&lt;/a&gt;
+         &lt;div style="clear:both"&gt;&lt;/div&gt;
+     &lt;/div&gt;
+ &lt;/div&gt;
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>高度不固定,垂直居中</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>//父容器 display:table;overflow:hidden;
+//子容器 display:table-cell;vertical-align:middle;
+
+#vc { display:table; background-color:#C2300B; width:500px; height:200px; overflow:hidden; margin-left:50px; _position:relative; }
+#vci { vertical-align:middle; display:table-cell; text-align:center; _position:absolute; _top:50%; _left:50%; }
+#content { color:#fff; border:1px solid #fff; display:inline-block; _position:relative; _top:-50%; _left:-50%; }
+&lt;div id="vc"&gt;
+    &lt;div id="vci"&gt;
+        &lt;div id="content"&gt;
+    我们垂直居中了，我们水平居中了
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>CSS3使用flex布局</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>#parent {
+            display: flex;
+            width: 400px; /* 宽度值，随便啦 */
+            height: 400px;  /* 高度值，随便啦 */
+            background-color: yellow;
+        }
+
+#item {
+            width: 100px;/* 宽度值，随便啦 */
+            height: 20px;/* 高度值，随便啦 */
+            margin: auto;
+            background-color: red; /* Magic! */
+        }
+
+&lt;div id="parent"&gt;
+    &lt;div id="item"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<p>tips: <strong>flex box</strong>
+猿题库也问了我这个,我当时答的不好,可以参考<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">这个讲解</a>.</p>
+
+<p><br /></p>
+
+<blockquote>
+  <p>事件委托</p>
+</blockquote>
+
+<p>使用事件委托技术能让你避免对特定的每个节点添加事件监听器；相反，事件监听器是被添加到它们的父元素上。事件监听器会分析从子元素冒泡上来的事件，找到是哪个子元素的事件。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ul id="list"&gt;
+  &lt;li id="item1"&gt;item1&lt;/li&gt;
+  &lt;li id="item2"&gt;item2&lt;/li&gt;
+  &lt;li id="item3"&gt;item3&lt;/li&gt;
+  &lt;li id="item4"&gt;item4&lt;/li&gt;
+&lt;/ul&gt;
+
+window.onload=function(){
+  var ulNode=document.getElementById("list");
+  ulNode.addEventListener('click',function(e){
+       if(e.target&amp;&amp;e.target.nodeName.toUpperCase()=="LI"){/*判断目标事件是否为li*/
+         alert(e.target.innerHTML);
+       }
+     },false);
+
+};
+
+</code></pre>
+</div>
+
+
+  </div>
+<script>
+  var pre = $("pre[class='highlight']"),
+      tags = pre.find("code");
+
+  pre.css({"margin-top":"10px","margin-bottom":"10px"});
+
+    tags.attr("class", "hljs");
+
+
+</script>
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper1">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+
+      </div>
+
+      <div class="footer-col footer-col-2">
+
+      </div>
+
+      <div class="footer-col footer-col-3">
+
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
