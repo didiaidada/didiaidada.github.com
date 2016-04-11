@@ -68,13 +68,138 @@
 
 <p>面试从一点半到四点半,当时不觉得累,回到学校很累,贾莉静说我很憔悴.面试的体验感觉不错.一共三面,前两面是技术面,最后一面是项目经理面.面试有条理,有梯度,考察的技术知识比较广.第三面的面试官说我太注重技术了.工作的完成依赖于技术,但还有很多其他的软实力吧,我现在还不是很能理解.</p>
 
-<p><br />
-#### Node 常用的原生核心模块</p>
+<p><br /></p>
+
+<h4 id="question1---node">QUESTION1 - Node常用的原生核心模</h4>
 
 <ol>
   <li>util提供常用函数的集合,用于弥补原生JS的功能过于精简不足.</li>
   <li>事件驱动events,并且这个模块只有一个对象:events.EventEmitter.EventEmitter的核心就是事件发射与事件监听器封装的功能.</li>
+  <li>fs是文件操作的封装,它提供了文件的读取,写入,更名,删除,遍历目录,链接等POSIX文件操作系统.</li>
+  <li>http模块.</li>
 </ol>
+
+<p><br /></p>
+
+<h4 id="question2---js">QUESTION2 - 清除JS缓存</h4>
+
+<p>方法一: mate方法</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;META HTTP-EQUIV="pragma" CONTENT="no-cache"&gt;
+&lt;META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"&gt;
+&lt;META HTTP-EQUIV="expires" CONTENT="0"&gt;
+</code></pre>
+</div>
+
+<p>方法二: ajax直接用cache:false</p>
+
+<p>方法三: 用随机数避免缓存,<code class="highlighter-rouge">location.href = location.href + "?_=" + new Date().valueOf()</code></p>
+
+<p><br /></p>
+
+<h4 id="question3---http">QUESTION3 - HTTP协议详解</h4>
+
+<p>HTTP是一个客户端（用户）和服务器端（网站）请求和答应的标准.通过Web浏览器,网络爬虫或者其他的工具,客户端发起一个HTTP请求到服务器上指定端口（默认端口为80）.http（超文本传输协议）是一个基于请求与响应模式的、无状态的、应用层的协议.</p>
+
+<p><br /></p>
+
+<p>HTTP的主要特点是:</p>
+
+<p><br /></p>
+
+<ul>
+  <li>支持客户/服务器模式</li>
+  <li>简单快速</li>
+  <li>灵活,HTTP允许传输任意类型的数据对象</li>
+  <li>无连接,无连接的含义是限制每次连接只处理一个请求.服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。</li>
+  <li>无状态：HTTP协议是无状态协议。无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。</li>
+</ul>
+
+<p><br /></p>
+
+<p>HTTP请求由三个部分组成,分别是:请求行,消息报头,请求正文</p>
+
+<p><br /></p>
+
+<ul>
+  <li>请求行以一个方法符号开头，以空格分开，后面跟着请求的URI和协议的版本，格式如下：
+    <ul>
+      <li>请求的方法有8种,常用的有GET,POST,HEAD,PUT,DELETE,TRACE,CONNECT,OPTIONS</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<p>HTTP响应由三个部分组成,分别是:状态行,消息报头,响应正文</p>
+
+<p><br /></p>
+
+<ul>
+  <li>状态行的格式<code class="highlighter-rouge">HTTP-Version Status-Code Reason-Phrase CRLF</code></li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+//xhr.status
+
+1xx：指示信息--表示请求已接收，继续处理
+2xx：成功--表示请求已被成功接收、理解、接受
+3xx：重定向--要完成请求必须进行更进一步的操作
+4xx：客户端错误--请求有语法错误或请求无法实现
+5xx：服务器端错误--服务器未能实现合法的请求
+
+//常见的状态码
+
+200 OK  //客户端请求成功
+400 Bad Request  //客户端请求有语法错误，不能被服务器所理解
+401 Unauthorized //请求未经授权，这个状态代码必须和WWW-Authenticate报 //头域一起使用
+403 Forbidden  //服务器收到请求，但是拒绝提供服务
+404 Not Found  //请求资源不存在，eg：输入了错误的URL
+500 Internal Server Error //服务器发生不可预期的错误
+503 Server Unavailable  //服务器当前不能处理客户端的请求，一段时间后,可能恢复正常
+
+</code></pre>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">请求报头</th>
+      <th style="text-align: left">报头解释</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Accept</td>
+      <td style="text-align: left">用于指定客户端接受哪些类型的信息</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Accept-Charset</td>
+      <td style="text-align: left">用于指定客户端接受的字符集</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Accept-Encoding</td>
+      <td style="text-align: left">用于指定可接受的内容编码</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Accept-Language</td>
+      <td style="text-align: left">用于指定客户端可接受的自然语言</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Authorization      </td>
+      <td style="text-align: left">用于证明客户端有权查看某个资源。当浏览器访问一个页面时，如果收到服务器的响应代码为401（未授权），可以发送一个包含Authorization请求报头域的请求，要求服务器对其进行验证</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Host</td>
+      <td style="text-align: left">指定被请求资源的Internet主机和端口号（必需项）</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">User-Agent</td>
+      <td style="text-align: left">请求报头域允许客户端将它的操作系统、浏览器和其它属性告诉服务器</td>
+    </tr>
+  </tbody>
+</table>
+
 
   </div>
 <script>
