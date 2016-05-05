@@ -5,9 +5,110 @@
     <description></description>
     <link>http://didiaidada.win//</link>
     <atom:link href="http://didiaidada.win//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 Apr 2016 21:21:06 +0800</pubDate>
-    <lastBuildDate>Tue, 12 Apr 2016 21:21:06 +0800</lastBuildDate>
+    <pubDate>Thu, 05 May 2016 16:54:57 +0800</pubDate>
+    <lastBuildDate>Thu, 05 May 2016 16:54:57 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>css secrects which i should know</title>
+        <description>&lt;h4 id=&quot;css-secrets&quot;&gt;「css secrets」的评价很高,写这本书的也是一位很出色的女生.向她学习.我也想借着学习的过程修改下我博客的样式.&lt;/h4&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;背景与边框&lt;/h3&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;px em rem&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;px (pixel),像素,相对于显示器屏幕分辨率而言.相对于浏览器它的值是固定的.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Em 和 rem都是灵活,可扩展的单位,由浏览器转换为像素值,具体取决于设计中的字体大小设置.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;em单位基于使用他们的元素的字体大小.rem单位基于html元素的字体大小.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;em单位可能受任何继承的父元素字体大小影响.rem单位可以从浏览器字体设置中继承字体大小.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;任意浏览器的默认字体高都是16px.所有未经调整的浏览器都符合: 1em=16px.(1px - 0.05em)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;HSLA(H,S,L,A)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;H: Hue(色调).0(或360)表示红色,120表示绿色,240表示蓝色,也可取其他数值来指定颜色.取值为：0 - 360&lt;/p&gt;
+
+&lt;p&gt;S: Saturation(饱和度).取值为:0.0% - 100.0%&lt;/p&gt;
+
+&lt;p&gt;L: Lightness(亮度).取值为:0.0% - 100.0%&lt;/p&gt;
+
+&lt;p&gt;A: Alpha透明度.取值0~1之间&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;background-clip:border-box&lt;/td&gt;
+        &lt;td&gt;padding-box&lt;/td&gt;
+        &lt;td&gt;content-box;属性规定背景的绘制区域.&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;box-shadow:h-shadow v-shadow blur spread color inset;向框添加一个或多个阴影.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;cal() 四则运算用于动态计算长度值&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;条纹背景&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;linear-gradient 常用于产生水平或者垂直条纹. repeating-linear-gradient 常用于制作斜条纹.&lt;/li&gt;
+  &lt;li&gt;linear-gradient 叠加可以制作网格.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;波点&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;radial-gradient&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Tue, 26 Apr 2016 09:34:13 +0800</pubDate>
+        <link>http://didiaidada.win//css/2016/04/26/CSS%E6%8F%AD%E7%A7%98%E7%B3%BB%E5%88%97%E4%B9%8B%E4%B8%80%E8%83%8C%E6%99%AF%E4%B8%8E%E8%BE%B9%E6%A1%86.html</link>
+        <guid isPermaLink="true">http://didiaidada.win//css/2016/04/26/CSS%E6%8F%AD%E7%A7%98%E7%B3%BB%E5%88%97%E4%B9%8B%E4%B8%80%E8%83%8C%E6%99%AF%E4%B8%8E%E8%BE%B9%E6%A1%86.html</guid>
+        
+        
+        <category>css</category>
+        
+      </item>
     
       <item>
         <title>Baidu网页搜索部实习面试</title>
