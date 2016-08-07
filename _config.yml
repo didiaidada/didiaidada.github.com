@@ -48,20 +48,27 @@ author:
   stackoverflow:
 #  stackoverflow: 4582127
   workHistory:
-    - work1:
-      company1: 北京北信源软件股份有限公司
+    - work:
+      company1: 百度 | 网页搜索部
+      location: 北京海淀区西北旺百度科技园F1
+      title: 前端开发
+      started: 2016
+      duration: (2016.05-至今)
+      description: 完成百度搜索餐饮类条目的卡片展示，包括结果页以及详情页。开发百度搜索自然结果页的左滑组件，包括左滑收藏，左滑分享。
+    - work:
+      company2: 北京北信源软件股份有限公司 | 移动互联部
       location: 北京海淀区中关村南大街34号中关村科技发展大厦C座16层
       title: 前端开发&页面设计
       started: 2015
-      duration: (2015.05 - 至今)
+      duration: (2015.05 - 2016.04)
       description1: 完成『连豆豆』官网，以及后台打包升级网站；『金甲防线』PC端用户评论子模块；公安信息网用户注册子模块。
-    - work2:
+    - work:
       company: 国家灾备实验室
       location: 北京邮电大学新科研楼12楼
       title: 学习&前端开发&页面设计&美工
       started: 2014
       duration: (2014.12 - 2015.03)
-      description2: 学习专业知识之余，完成中认特种设备查询网站的前端工作，是特种设备从业单位和从业人员信息数据权威发布和查询的政府网站。
+      description: 学习专业知识之余，完成中认特种设备查询网站的前端工作，是特种设备从业单位和从业人员信息数据权威发布和查询的政府网站。
   educationHistory:
     - education1:
       organization: 北京邮电大学

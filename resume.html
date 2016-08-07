@@ -14,8 +14,11 @@ layout: default1
                             {% endif %}
                             <div class="timeline-panel grid-block">
                                 <div class="timeline-heading">
+                                    {% if work.company2 %}
+                                        <h4 class="timeline-title"><a target="_blank" href="http://baike.baidu.com/link?url=uXdXFxMnUC3kejbR0jZ4c3U4LpG0WxMUCx7Fru8OlhLbkIlkNhLwptwgfQcivVMSMVuLpwH6mit5or1ABJmtZK">{{ work.company2 }}</a> </h4>
+                                    {% endif %}
                                     {% if work.company1 %}
-                                        <h4 class="timeline-title"><a target="_blank" href="http://baike.baidu.com/link?url=uXdXFxMnUC3kejbR0jZ4c3U4LpG0WxMUCx7Fru8OlhLbkIlkNhLwptwgfQcivVMSMVuLpwH6mit5or1ABJmtZK">{{ work.company1 }}</a> </h4>
+                                        <h4 class="timeline-title"><a target="_blank" href="https://www.baidu.com/">{{ work.company1 }}</a> </h4>
                                     {% endif %}
                                   {% if work.company %}
                                   <h4 class="timeline-title"><a target="_blank" >{{ work.company }}</a> </h4>
@@ -44,8 +47,8 @@ layout: default1
                                         <br>
                                         <p><i class="fa fa-hand-o-right fa-fw"></i><a href="http://www.linkdood.com" target="_blank">『连豆豆』</a> | <a href="http://arm.vrv.com.cn" target="_blank">『金甲防线』</a></p>
                                     {% endif %}
-                                    {% if work.description2 %}
-                                        <p>{{ work.description2 }}</p>
+                                    {% if work.description %}
+                                        <p>{{ work.description }}</p>
                                     {% endif %}
                                 </div>
                             </div>

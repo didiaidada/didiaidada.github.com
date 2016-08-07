@@ -6,7 +6,7 @@ permalink: /about/
 
 ## 肖丹
 
-**前端工程师** &nbsp;&nbsp; &nbsp;|**求实习求内推**
+**前端工程师**
 
 **<a href="mailto:13121309082@163.com">13121309082@163.com</a>**  &nbsp;&nbsp;&nbsp;|**喂，wo是个认真的妹纸啊ヾ(=^▽^=)ノ**
 &nbsp;&nbsp;
