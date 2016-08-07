@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ES6入门笔记(一)</title>
+  <meta name="description" content="  ES6已向我们走来.">
+  <link rel="icon" type="image/png" href="/assets/img/dan.jpg">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/markdown.min.css">
+  <link rel="canonical" href="http://didiaidada.win//es6/2016/08/03/es6%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0.html">
+  <link rel="alternate" type="application/rss+xml" title="DanX" href="http://didiaidada.win//feed.xml">
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+
+  <body  style="background-image: url('/img/post-bg-newBlog.jpg') ;">
+
+    <header class="intro-header " >
+  <div class="container">
+    <a class="site-title" href="/">DanX</a>
+
+        
+        
+        <a class="site-nav" href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+        <div class="site-heading">
+          <span class="subheading">总是走在漫长的路上</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">ES6入门笔记(一)</h1>
+    <p class="post-meta"><time datetime="2016-08-03T19:01:41+08:00" itemprop="datePublished">Aug 3, 2016</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">danX</span></span></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <blockquote>
+  <p>ES6已向我们走来.</p>
+</blockquote>
+
+<h3 id="let--const--var">1. let | const | var</h3>
+
+<hr />
+
+<p> </p>
+
+<p>let和const是ES6新增的声明变量的方法.</p>
+
+<p> </p>
+
+<h4 id="let">1.1 let的基本特征</h4>
+
+<ol>
+  <li>
+    <p>let为JavaScript新增块级作用域</p>
+  </li>
+  <li>
+    <p>不存在变量提升</p>
+  </li>
+  <li>
+    <p>暂时性死区,暂时性死区的本质就是，只要一进入当前作用域，所要使用的变量就已经存在了，但是不可获取，只有等到声明变量的那一行代码出现，才可以获取和使用该变量。</p>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>if{
+    var a = 10;
+    let b = 1;
+}
+
+a // ReferenceError: a is not defined.
+b // 1
+//暂时性死区
+var tmp = 123;
+
+if (true) {
+  tmp = 'abc'; // ReferenceError
+  let tmp;
+}
+
+</code></pre>
+</div>
+
+<h4 id="const">1.2 const基本特征</h4>
+
+<ol>
+  <li>
+    <p>const声明一个只读的常量。一旦声明，常量的值就不能改变.</p>
+  </li>
+  <li>
+    <p>对const来说,只声明不赋值,会报错.</p>
+  </li>
+  <li>
+    <p>const的作用域与let命令相同：只在声明所在的块级作用域内有效.const命令声明的常量也是不提升，同样存在暂时性死区，只能在声明的位置后面使用.</p>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>const foo;
+// SyntaxError: Missing initializer in const declaration
+
+//块级作用域
+if (true) {
+  const MAX = 5;
+}
+MAX // Uncaught ReferenceError: MAX is not defined
+
+//变量不提升
+if (true) {
+  console.log(MAX); // ReferenceError
+  const MAX = 5;
+}
+
+
+</code></pre>
+</div>
+
+<h4 id="letconst">1.3 let和const其他特征</h4>
+
+<ol>
+  <li>
+    <p>ES5中未声明的全局变量,会自动成为window对象的属性.</p>
+  </li>
+  <li>
+    <p>var命令和function命令声明的全局变量，依旧是全局对象的属性；另一方面规定，let命令、const命令、class命令声明的全局变量，不属于全局对象的属性.</p>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var a = 1;
+// 如果在Node的REPL环境，可以写成global.a
+// 或者采用通用方法，写成this.a
+window.a // 1
+
+let b = 1;
+window.b // undefined
+
+</code></pre>
+</div>
+
+<h3 id="section">2. 变量的解构赋值</h3>
+
+<hr />
+
+<h3 id="section-1">3. 字符串的扩展</h3>
+
+<hr />
+
+<h4 id="section-2">3.1 新增的实用方法</h4>
+
+<p>传统上，JavaScript只有indexOf方法，可以用来确定一个字符串是否包含在另一个字符串中。ES6又提供了三种新方法。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">函数名</th>
+      <th style="text-align: left">用法</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">includes()</td>
+      <td style="text-align: left">返回布尔值,表示是否找到参数字符串</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">startsWith()</td>
+      <td style="text-align: left">返回布尔值,表示参数字符串是否在源字符串的头部</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">endsWidth()</td>
+      <td style="text-align: left">返回布尔值,表示参数字符串是否在源字符串的尾部</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">repeat()</td>
+      <td style="text-align: left">返回一个新字符串,表示将源字符串重复n次</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="section-3">3.2 模板字符串</h4>
+
+<p>模板字符串（template string）是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+// 普通字符串
+`In JavaScript '\n' is a line-feed.`
+
+// 多行字符串
+`In JavaScript this is
+ not legal.`
+
+console.log(`string text line 1
+string text line 2`);
+
+// 字符串中嵌入变量
+var name = "Bob", time = "today";
+`Hello ${name}, how are you ${time}?`
+
+</code></pre>
+</div>
+
+<h3 id="section-4">4. 函数的扩展</h3>
+
+<hr />
+
+<h4 id="section-5">4.1 箭头函数</h4>
+
+<p><strong>注意:函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。</strong></p>
+
+<p>箭头函数可以让this指向固定化，这种特性很有利于封装回调函数。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function Timer() {
+  this.s1 = 0;
+  this.s2 = 0;
+  // 箭头函数
+  setInterval(() =&gt; this.s1++, 1000);
+  // 普通函数
+  setInterval(function () {
+    this.s2++;
+  }, 1000);
+}
+
+var timer = new Timer();
+
+setTimeout(() =&gt; console.log('s1: ', timer.s1), 3100);
+setTimeout(() =&gt; console.log('s2: ', timer.s2), 3100);
+// s1: 3
+// s2: 0
+
+//上面代码中，Timer函数内部设置了两个定时器，分别使用了箭头函数和普通函数。前者的this绑定定义时所在的作用域（即Timer函数），后者的this指向运行时所在的作用域（即全局对象）。所以，3100毫秒之后，timer.s1被更新了3次，而timer.s2一次都没更新。
+</code></pre>
+</div>
+
+<h3 id="section-6">5. 对象的扩展</h3>
+
+<hr />
+
+<h4 id="section-7">5.1 属性的简洁表示法</h4>
+
+<p>ES6允许直接写入变量和函数，作为对象的属性和方法。这样的书写更加简洁。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function f(x, y) {
+  return {x, y};
+}
+
+// 等同于
+
+function f(x, y) {
+  return {x: x, y: y};
+}
+
+f(1, 2) // Object {x: 1, y: 2}
+
+
+var o = {
+  method() {
+    return "Hello!";
+  }
+};
+
+// 等同于
+
+var o = {
+  method: function() {
+    return "Hello!";
+  }
+};
+
+var birth = '2000/01/01';
+
+var Person = {
+
+  name: '张三',
+
+  //等同于birth: birth
+  birth,
+
+  // 等同于hello: function ()...
+  hello() { console.log('我的名字是', this.name); }
+
+};
+</code></pre>
+</div>
+
+<h4 id="section-8">5.2 属性名表达式</h4>
+
+<p>对象的属性可以使用表达式</p>
+
+<p> </p>
+
+<h4 id="name">5.3 方法的name属性</h4>
+
+<p>函数的name属性，返回函数名。对象方法也是函数，因此也有name属性。</p>
+
+<p> </p>
+
+<h4 id="objectis">5.4 Object.is()</h4>
+
+<p>ES5比较两个值是否相等，只有两个运算符：相等运算符（==）和严格相等运算符（===）。它们都有缺点，前者会自动转换数据类型，后者的NaN不等于自身，以及+0等于-0。</p>
+
+<p>Object.is就是部署这个算法的新方法。它用来比较两个值是否严格相等，与严格比较运算符（===）的行为基本一致。不同之处只有两个：一是+0不等于-0，二是NaN等于自身。</p>
+
+<p> </p>
+
+<h4 id="objectassign">5.5 Object.assign()</h4>
+
+<p>Object.assign方法用于对象的合并，将源对象（source）的所有可枚举属性，复制到目标对象（target）。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//Object.assign方法的第一个参数是目标对象，后面的参数都是源对象。
+
+var target = { a: 1 };
+
+var source1 = { b: 2 };
+var source2 = { c: 3 };
+
+Object.assign(target, source1, source2);
+target // {a:1, b:2, c:3}
+
+//如果该参数不是对象，则会先转成对象，然后返回。
+//由于undefined和null无法转成对象，所以如果它们作为参数，就会报错。
+
+typeof Object.assign(2) // "object"
+Object.assign(undefined) // 报错
+Object.assign(null) // 报错
+
+
+</code></pre>
+</div>
+
+<p>Object.assign方法实行的是浅拷贝，而不是深拷贝。也就是说，如果源对象某个属性的值是对象，那么目标对象拷贝得到的是这个对象的引用。</p>
+
+
+  </div>
+<script>
+  var pre = $("pre[class='highlight']"),
+      tags = pre.find("code");
+
+  pre.css({"margin-top":"10px","margin-bottom":"10px"});
+
+    tags.attr("class", "hljs");
+
+
+</script>
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper1">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+
+      </div>
+
+      <div class="footer-col footer-col-2">
+
+      </div>
+
+      <div class="footer-col footer-col-3">
+
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

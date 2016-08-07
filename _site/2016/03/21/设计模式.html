@@ -1,26 +1,27 @@
 
----
-layout: post
+<hr />
+<p>layout: post
 title: JavaScript设计模式
 subtitle: 
 author: danX
 date: 2016-03-21 09:42:06 +0800
 categories: JavaScript
 tag: 
----
+—</p>
 
-## JavaScript设计模式简单解释
+<h2 id="javascript">JavaScript设计模式简单解释</h2>
 
-&nbsp;
+<p> </p>
 
->JS设计模式按照功能可以分为三类：**创建型设计模式**；**构造型设计模式**；**行为设计模式**
+<blockquote>
+  <p>JS设计模式按照功能可以分为三类：<strong>创建型设计模式</strong>；<strong>构造型设计模式</strong>；<strong>行为设计模式</strong></p>
+</blockquote>
 
-&nbsp;
+<p> 
 1. 创建型设计模式：专注于处理对象的创建机制，以适合给定情况的方式创建对象。主要包括工厂模式，单例模式，构造器模式。
-&nbsp;
+ </p>
 
-```
-//工厂模式
+<div class="highlighter-rouge"><pre class="highlight"><code>//工厂模式
 function createObject(name, age, profession){
     var obj = new Object();
     obj.name = name;
@@ -43,14 +44,14 @@ function Car(model,year,miles){//构造函数模式
         }
     }
  
-```
-<br>
+</code></pre>
+</div>
+<p><br />
  工厂模式用于解决实例化对象大量重复的问题，好处是：可以消除对象之间的耦合，防止代码重复。但是无法识别对象的具体类型。
  构造函数模式解决了重复实例化的问题，又解决了对象识别问题。
-<br>
+<br /></p>
 
-```
-//单例模式
+<div class="highlighter-rouge"><pre class="highlight"><code>//单例模式
 var single = ( function(){
     var unique;
     function getInstance(){
@@ -66,11 +67,17 @@ var single = ( function(){
         getInstance : getInstance
     }
 })();
-```
+</code></pre>
+</div>
 
-<br>
-单例模式限制了类的实例化次数只能是一次，在JS中用于划分命名空间。
+<p><br />
+单例模式限制了类的实例化次数只能是一次，在JS中用于划分命名空间。</p>
 
-2. 构造型设计模式： 与对象组合有关，通常用于找出不同对象之间建立关系的简单方法。主要包括外观模式，适配器模式，代理模式。
-
-3. 行为设计模式：主要用于改善或简化不同对象之间的通信。主要包括中介者模式，观察者模式。
+<ol>
+  <li>
+    <p>构造型设计模式： 与对象组合有关，通常用于找出不同对象之间建立关系的简单方法。主要包括外观模式，适配器模式，代理模式。</p>
+  </li>
+  <li>
+    <p>行为设计模式：主要用于改善或简化不同对象之间的通信。主要包括中介者模式，观察者模式。</p>
+  </li>
+</ol>
