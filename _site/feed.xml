@@ -5,8 +5,8 @@
     <description></description>
     <link>http://didiaidada.win//</link>
     <atom:link href="http://didiaidada.win//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Sep 2016 10:56:06 +0800</pubDate>
-    <lastBuildDate>Tue, 20 Sep 2016 10:56:06 +0800</lastBuildDate>
+    <pubDate>Tue, 20 Sep 2016 11:02:33 +0800</pubDate>
+    <lastBuildDate>Tue, 20 Sep 2016 11:02:33 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -66,7 +66,7 @@
       </item>
     
       <item>
-        <title>ES6入门笔记（二）</title>
+        <title>ES6入门笔记(二)</title>
         <description>&lt;h3 id=&quot;symbol&quot;&gt;6. Symbol&lt;/h3&gt;
 
 &lt;hr /&gt;
