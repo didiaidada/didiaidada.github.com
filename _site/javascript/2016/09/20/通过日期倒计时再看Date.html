@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>通过日期倒计时再看Date</title>
+  <meta name="description" content="  talk is cheap, show me the code.">
+  <link rel="icon" type="image/png" href="/assets/img/dan.jpg">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/markdown.min.css">
+  <link rel="canonical" href="http://didiaidada.win//javascript/2016/09/20/%E9%80%9A%E8%BF%87%E6%97%A5%E6%9C%9F%E5%80%92%E8%AE%A1%E6%97%B6%E5%86%8D%E7%9C%8BDate.html">
+  <link rel="alternate" type="application/rss+xml" title="DanX" href="http://didiaidada.win//feed.xml">
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+
+  <body  style="background-image: url('/img/post-bg-newBlog.jpg') ;">
+
+    <header class="intro-header " >
+  <div class="container">
+    <a class="site-title" href="/">DanX</a>
+
+        
+        
+        <a class="site-nav" href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+        <div class="site-heading">
+          <span class="subheading">总是走在漫长的路上</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">通过日期倒计时再看Date</h1>
+    <p class="post-meta"><time datetime="2016-09-20T09:49:06+08:00" itemprop="datePublished">Sep 20, 2016</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">danX</span></span></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <blockquote>
+  <p>talk is cheap, show me the code.</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function ShowCountDown(year, month, day, divname) {
+    var now = new Date();
+    var endDate = new Date(year, month - 1, day, 14, 07);
+    var leftTime = endDate.getTime() - now.getTime();
+    var leftsecond = parseInt(leftTime / 1000);
+    var day1 = Math.floor(leftsecond / (60 * 60 * 24));
+    var hour1 = Math.floor((leftsecond - day1 * 24 * 60 * 60) / 3600);
+    var hour = Math.floor((leftsecond - 60 * 60) / 3600);
+    //如果小时为负数 显示0
+    if (hour &gt; 0) {
+    }
+    else {
+        hour = 0;
+    }
+    if (day1 &lt; 0) {
+        hour = hour1 ;
+    }
+    var minute = Math.floor((leftsecond - day1 * 24 * 60 * 60 - hour1 * 3600) / 60);
+    var second = Math.floor(leftsecond - day1 * 24 * 60 * 60 - hour1 * 3600 - minute * 60);
+    //如果结束时间为负数 就显示0
+    if (leftTime &gt; 0) {
+        console.log(hour + "小时" + minute + "分" + second + "秒");
+    }
+    else {
+        console.log(0 + "小时" + 0 + "分" + 0 + "秒");
+    }
+}
+</code></pre>
+</div>
+<blockquote>
+  <p>关于JS中Date类型的tips</p>
+</blockquote>
+
+<ol>
+  <li>Date.parse()会返回该日期的毫秒数(即从1970-1-1子夜到现在的毫秒数),若传入的数据不能表示日期,则返回NAN.</li>
+  <li>Date.toString()中的月份,采用军用月份,是0-11,例如new Date(2016,2,11),返回的是Fri Mar 11 2016 00:00:00 GMT+0800 (CST)</li>
+  <li>Date.valueOf()返回的不是日期的字符串,而是日期的毫秒数.因此日期可以直接比较大小.</li>
+  <li>Date.now()返回的是当前日期的毫秒数.</li>
+  <li>Date实例拥有的方法getTime(),getFullYear(),getMouth(),getDate(),getMinutes(),getSeconds(),getDay()</li>
+</ol>
+
+  </div>
+<script>
+  var pre = $("pre[class='highlight']"),
+      tags = pre.find("code");
+
+  pre.css({"margin-top":"10px","margin-bottom":"10px"});
+
+    tags.attr("class", "hljs");
+
+
+</script>
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper1">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+
+      </div>
+
+      <div class="footer-col footer-col-2">
+
+      </div>
+
+      <div class="footer-col footer-col-3">
+
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

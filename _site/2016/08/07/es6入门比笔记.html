@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ES6入门笔记（二）</title>
+  <meta name="description" content="6. Symbol">
+  <link rel="icon" type="image/png" href="/assets/img/dan.jpg">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/markdown.min.css">
+  <link rel="canonical" href="http://didiaidada.win//2016/08/07/es6%E5%85%A5%E9%97%A8%E6%AF%94%E7%AC%94%E8%AE%B0.html">
+  <link rel="alternate" type="application/rss+xml" title="DanX" href="http://didiaidada.win//feed.xml">
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+
+  <body  style="background-image: url('/img/post-bg-newBlog.jpg') ;">
+
+    <header class="intro-header " >
+  <div class="container">
+    <a class="site-title" href="/">DanX</a>
+
+        
+        
+        <a class="site-nav" href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+        <div class="site-heading">
+          <span class="subheading">总是走在漫长的路上</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">ES6入门笔记（二）</h1>
+    <p class="post-meta"><time datetime="2016-08-07T18:34:53+08:00" itemprop="datePublished">Aug 7, 2016</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">danX</span></span></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h3 id="symbol">6. Symbol</h3>
+
+<hr />
+
+<p> </p>
+
+<p>ES6引入了一种新的原始数据类型Symbol，表示独一无二的值。它是JavaScript语言的第七种数据类型，前六种是:Undefined,Null,Boolean,Number,String,Object.</p>
+
+<p> </p>
+
+<p>Symbol函数前不能使用new命令，否则会报错。这是因为生成的Symbol是一个原始类型的值，不是对象。也就是说，由于Symbol值不是对象，所以不能添加属性。基本上，它是一种类似于字符串的数据类型。</p>
+
+<p>Symbol函数可以接受一个字符串作为参数，表示对Symbol实例的描述，主要是为了在控制台显示，或者转为字符串时，比较容易区分。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var s1 = Symbol('foo');
+var s2 = Symbol('bar');
+
+s1 // Symbol(foo)
+s2 // Symbol(bar)
+
+s1.toString() // "Symbol(foo)"
+s2.toString() // "Symbol(bar)"
+
+</code></pre>
+</div>
+
+<p>Symbol值不能与其他类型的值进行运算，会报错。但是，Symbol值可以显式转为字符串,布尔值.</p>
+
+<h3 id="set">7. Set()</h3>
+
+<hr />
+
+<p>ES6提供了新的数据结构Set。它类似于数组，但是成员的值都是唯一的，没有重复的值。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// 去除数组的重复成员
+[...new Set(array)]
+</code></pre>
+</div>
+
+<p>Set实例的方法分为两大类:操作方法(用于操作数据)和遍历方法（用于遍历成员）.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">操作方法名</th>
+      <th style="text-align: left">含义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">add(value)</td>
+      <td style="text-align: left">添加某个值,返回Set结构本身</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">delete(value)</td>
+      <td style="text-align: left">删除某个值，返回一个布尔值，表示删除是否成功</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">has(value)</td>
+      <td style="text-align: left">返回一个布尔值，表示该值是否为Set的成员</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">clear()</td>
+      <td style="text-align: left">清除所有成员，没有返回值</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//Array.from方法可以将Set结构转为数组
+//去除数组重复成员
+function dedupe(array) {
+  return Array.from(new Set(array));
+}
+
+dedupe([1, 1, 2, 3]) // [1, 2, 3]
+</code></pre>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">变量方法名</th>
+      <th style="text-align: left">含义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">keys()</td>
+      <td style="text-align: left">返回键名的遍历器</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">values()</td>
+      <td style="text-align: left">返回键值的遍历器</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">entries()</td>
+      <td style="text-align: left">返回键值对的遍历器</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">forEach()</td>
+      <td style="text-align: left">使用回调函数遍历每个成员</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>由于Set结构没有键名，只有键值（或者说键名和键值是同一个值），所以key方法和value方法的行为完全一致。</p>
+
+
+  </div>
+<script>
+  var pre = $("pre[class='highlight']"),
+      tags = pre.find("code");
+
+  pre.css({"margin-top":"10px","margin-bottom":"10px"});
+
+    tags.attr("class", "hljs");
+
+
+</script>
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper1">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+
+      </div>
+
+      <div class="footer-col footer-col-2">
+
+      </div>
+
+      <div class="footer-col footer-col-3">
+
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
