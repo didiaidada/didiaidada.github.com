@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b4f7bd1d-4acc-4f8d-b1a0-9ed7a7a40b3f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-08-03-es6入门笔记.md" afterPath="$PROJECT_DIR$/_posts/2016-08-03-es6入门笔记.md" />
     </list>
     <ignored path="didiaidada.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,12 +47,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016-08-03-es6入门笔记.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2016-08-03-es6入门笔记.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2016-08-03-es6入门笔记.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="276">
+              <first_editor relative-caret-position="46">
                 <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2016-03-21-设计模式.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2016-03-21-设计模式.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="23">
+                <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -340,12 +352,12 @@
       <workItem from="1474335575779" duration="3631000" />
       <workItem from="1474508537522" duration="2677000" />
       <workItem from="1474631472640" duration="454000" />
-      <workItem from="1474990094546" duration="39000" />
+      <workItem from="1474990094546" duration="352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58752000" />
+    <option name="totallyTimeSpent" value="59065000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -675,21 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-03-21-设计模式.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="23">
-            <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resume.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-69">
@@ -824,8 +821,24 @@
     <entry file="file://$PROJECT_DIR$/_posts/2016-08-03-es6入门笔记.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="276">
+          <first_editor relative-caret-position="46">
             <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2016-03-21-设计模式.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="23">
+            <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
