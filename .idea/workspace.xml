@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b4f7bd1d-4acc-4f8d-b1a0-9ed7a7a40b3f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-08-03-es6入门笔记.md" afterPath="$PROJECT_DIR$/_posts/2016-08-03-es6入门笔记.md" />
     </list>
     <ignored path="didiaidada.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,12 +48,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016-08-03-es6入门笔记.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2016-08-03-es6入门笔记.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2016-08-03-es6入门笔记.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="6371">
-                <caret line="277" column="0" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
+              <first_editor relative-caret-position="276">
+                <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -86,12 +87,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016-09-22-javascript中的浅拷贝和深拷贝.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2016-09-22-javascript中的浅拷贝和深拷贝.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2016-09-22-javascript中的浅拷贝和深拷贝.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="23">
+              <first_editor relative-caret-position="736">
                 <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="实习面试小记.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/实习面试小记.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="437">
+                <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -126,11 +140,11 @@
         <option value="$PROJECT_DIR$/_includes/header1.html" />
         <option value="$PROJECT_DIR$/about.md" />
         <option value="$PROJECT_DIR$/_config.yml" />
-        <option value="$PROJECT_DIR$/_posts/2016-08-03-es6入门笔记.md" />
         <option value="$PROJECT_DIR$/_posts/2016-09-20-.md" />
         <option value="$PROJECT_DIR$/_posts/2016-09-20-通过日期倒计时再看Date.md" />
         <option value="$PROJECT_DIR$/_posts/2016-08-07-es6入门比笔记.md" />
         <option value="$PROJECT_DIR$/_posts/2016-09-22-javascript中的浅拷贝和深拷贝.md" />
+        <option value="$PROJECT_DIR$/_posts/2016-08-03-es6入门笔记.md" />
       </list>
     </option>
   </component>
@@ -325,12 +339,13 @@
       <workItem from="1471764461973" duration="1925000" />
       <workItem from="1474335575779" duration="3631000" />
       <workItem from="1474508537522" duration="2677000" />
-      <workItem from="1474631472640" duration="3000" />
+      <workItem from="1474631472640" duration="454000" />
+      <workItem from="1474990094546" duration="39000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58262000" />
+    <option name="totallyTimeSpent" value="58752000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -343,9 +358,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2319301" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2319301" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329235" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -675,21 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-04-07-baidu网页搜索部实习面试.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="437">
-            <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resume.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-69">
@@ -772,17 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-08-03-es6入门笔记.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="6371">
-            <caret line="277" column="0" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2016-08-07-es6入门比笔记.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -808,8 +797,35 @@
     <entry file="file://$PROJECT_DIR$/_posts/2016-09-22-javascript中的浅拷贝和深拷贝.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="23">
+          <first_editor relative-caret-position="736">
             <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/实习面试小记.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="437">
+            <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2016-08-03-es6入门笔记.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="276">
+            <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
